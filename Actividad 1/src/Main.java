@@ -81,15 +81,25 @@ public class Main {
             double numMin = Math.min(num21, num22);
             double numMax = Math.max(num21, num22);
 
-        System.out.println("El orden ascendente es: " + numMin + numMax);
+        System.out.println("El orden ascendente es: " + numMin + "," + numMax);
 
 
+        //ejercicio 9
 
+        Scanner sc6 = new Scanner(System.in);
 
+        System.out.println("Numero 1: ");
+        double num31 = sc6.nextDouble();
+        System.out.println("Numero 2: ");
+        double num32 = sc6.nextDouble();
 
-
-
-
+       if(num31 > num32){
+           System.out.println("El numero " + num31 + " es mayor a " + num32);
+       } else if (num31 < num32) {
+           System.out.println("El numero" + num31 + " es menor a " + num32);
+       }else{
+           System.out.println("Los numeros son iguales");
+       }
 
 
     }
