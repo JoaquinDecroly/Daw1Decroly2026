@@ -3,7 +3,15 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .iml
+
+# Ignorar todo el directorio
 .idea/
+
+# Pero mantener estos archivos específicos
+!.idea/misc.xml
+!.idea/modules.xml
+!.idea/vcs.xml
+!.idea/gradle.xmlCopied!
 
 ### Eclipse ###
 .apt_generated
