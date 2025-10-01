@@ -21,7 +21,7 @@ public class Main {
 
          double area1 = lado1 + lado1;
 
-         System.out.println("El area del cuadrado de lado " + lado1 + "es: " + area1);
+         System.out.println("El area del cuadrado de lado " + lado1 + " es: " + area1);
 
 
          //ejercicio 4
@@ -67,7 +67,7 @@ public class Main {
         System.out.println("Millas marinas a convertir: ");
         double millas = sc4.nextDouble();
 
-        System.out.println("Equivalencia en metros: " + (millas/1852));
+        System.out.println("Equivalencia en metros: " + (millas * 1852));
 
 
         //ejercicio 8
@@ -96,10 +96,49 @@ public class Main {
        if(num31 > num32){
            System.out.println("El numero " + num31 + " es mayor a " + num32);
        } else if (num31 < num32) {
-           System.out.println("El numero" + num31 + " es menor a " + num32);
+           System.out.println("El numero " + num32 + " es mayor a " + num31);
        }else{
            System.out.println("Los numeros son iguales");
        }
+
+       //ejercicio 10
+        Scanner sc7 = new Scanner(System.in);
+
+        System.out.println("Numero 1: ");
+        double num41 = sc6.nextDouble();
+
+        System.out.println("Numero 2: ");
+        double num42 = sc6.nextDouble();
+
+        System.out.println("Numero 3: ");
+        double num43 = sc6.nextDouble();
+
+        double numMax1 =Math.max(num41, num42);
+        double numMax2 =Math.max(num42, num43);
+
+        double  numMax3 = Math.max(numMax1, numMax2);
+
+        System.out.println("El numero mayor de los 3 números proporcionados \n es: " + numMax3);
+
+
+        //ejercicio 11
+        Scanner sc8 = new Scanner(System.in);
+
+        System.out.println("Numero 1: ");
+        double num51 = sc6.nextDouble();
+
+        System.out.println("Numero 2: ");
+        double num52 = sc6.nextDouble();
+
+        System.out.println("La suma es : " + (num51 + num52));
+        System.out.println("La resta es : " + (num51 - num52));
+        System.out.println("La división es : " + (num51/num52));
+//            if(num51/num52 )
+        System.out.println("El producto es: " + (num51 + num52));
+
+
+
+
 
 
     }
