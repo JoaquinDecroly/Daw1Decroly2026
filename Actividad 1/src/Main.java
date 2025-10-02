@@ -101,6 +101,8 @@ public class Main {
             System.out.println("Los numeros son iguales");
         }
 
+
+
         //ejercicio 10
         Scanner sc7 = new Scanner(System.in);
 
@@ -135,9 +137,13 @@ public class Main {
 
 
         double div = num51 / num52;
+
+
         if (div == 0) {
             System.out.println("Esta división es indeterminada: " + num51 + "/" + num52);
         } else System.out.println("La división es : " + (num51 / num52));
+
+
 
 
 
@@ -164,9 +170,12 @@ public class Main {
         System.out.println("Numero 1: ");
         double num71 = sc10.nextDouble();
 
-        if(num71 > -1){
-            System.out.println("El numero " + num71 + " es positivo");
-        }else System.out.println("El numero " + num71 + " es negativo");
+//        if(num71 > -1){
+//            System.out.println("El numero " + num71 + " es positivo");
+//        }else System.out.println("El numero " + num71 + " es negativo");
+
+        System.out.println("El numero es positivo: " + (num71 > (-1)));
+        System.out.println("El numero es negativo: " + (num71 < 0));
         
     }
 }
