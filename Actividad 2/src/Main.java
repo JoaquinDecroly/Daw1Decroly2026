@@ -9,10 +9,24 @@ public class Main {
         Scanner sc1 = new Scanner(System.in);
 
         System.out.println("Edad: ");
-        int edad = sc1.nextInt();
+        int edad1 = sc1.nextInt();
 
-        if (edad > 17) {
+        if (edad1 > 17) {
+            System.out.println("Eres mayor de edad!");
+        }
+
+
+        //ejercicio 2
+        Scanner sc2 = new Scanner(System.in);
+        System.out.println("Edad: ");
+        int edad2 = sc1.nextInt();
+
+        if (edad2 > 17) {
             System.out.println("Eres mayor de edad!");
         }else System.out.println("Eres menor de edad!");
+
+
+        //ejercicio 3
+        
     }
 }
