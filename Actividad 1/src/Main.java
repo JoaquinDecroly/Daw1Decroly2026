@@ -21,7 +21,7 @@ public class Main {
 
         double area1 = lado1 + lado1;
 
-        System.out.println("El area del cuadrado de lado " + lado1 + " es: " + area1);
+        System.out.println("El area del cuadrado de lado " + lado1 + " es: " + area1); //area cuadrado A = l^2
 
 
         //ejercicio 4
@@ -45,9 +45,9 @@ public class Main {
         System.out.println("Radio: ");
         double radio = sc2.nextDouble();
 
-        System.out.println("Longitud circunferencia: " + (2 * Math.PI * radio));
-        System.out.println("Area del circulo: " + (Math.PI * (radio * radio)));
-        System.out.println("Volumen esfera: " + (4 * Math.PI * (radio * radio * radio)) / 3);
+        System.out.println("Longitud circunferencia: " + (2 * Math.PI * radio)); //longitud circunferencia
+        System.out.println("Area del circulo: " + (Math.PI * (Math.pow(radio, 2)))); //area circulo
+        System.out.println("Volumen esfera: " + (4 * Math.PI * (Math.pow(radio, 3))) / 3); //volumen esfera
 
 
         //ejercicio 6
@@ -60,14 +60,14 @@ public class Main {
         double precioRealArt = sc3.nextDouble();
 
         System.out.println("El valor del descuento es de:\n " +
-                ((precioArt - precioRealArt) / precioArt) * 100);
+                ((precioArt - precioRealArt) / precioArt) * 100); //operacion descuento
 
         //ejercicio 7
         Scanner sc4 = new Scanner(System.in);
         System.out.println("Millas marinas a convertir: ");
         double millas = sc4.nextDouble();
 
-        System.out.println("Equivalencia en metros: " + (millas * 1852));
+        System.out.println("Equivalencia en metros: " + (millas * 1852)); //conversion millas marinas a metros
 
 
         //ejercicio 8
@@ -78,8 +78,8 @@ public class Main {
         System.out.println("Numero 2: ");
         double num22 = sc5.nextDouble();
 
-        double numMin = Math.min(num21, num22);
-        double numMax = Math.max(num21, num22);
+        double numMin = Math.min(num21, num22); //obtener máximo
+        double numMax = Math.max(num21, num22); //obtener minimo
 
         System.out.println("El orden ascendente es: " + numMin + "," + numMax);
 
@@ -93,13 +93,16 @@ public class Main {
         System.out.println("Numero 2: ");
         double num32 = sc6.nextDouble();
 
-        if (num31 > num32) {
-            System.out.println("El numero " + num31 + " es mayor a " + num32);
-        } else if (num31 < num32) {
-            System.out.println("El numero " + num32 + " es mayor a " + num31);
-        } else {
-            System.out.println("Los numeros son iguales");
-        }
+//        if (num31 > num32) {
+//            System.out.println("El numero " + num31 + " es mayor a " + num32);
+//        } else if (num31 < num32) {
+//            System.out.println("El numero " + num32 + " es mayor a " + num31);
+//        } else {
+//            System.out.println("Los numeros son iguales");
+//        }
+
+        System.out.println("El numero mayor es: " + Math.max(num31, num32)); //obtener máximo
+        System.out.println("¿Los numeros son iguales? " + (num31 == num32)); //comparacion ==, true/false
 
 
 
@@ -115,10 +118,10 @@ public class Main {
         System.out.println("Numero 3: ");
         double num43 = sc7.nextDouble();
 
-        double numMax1 = Math.max(num41, num42);
-        double numMax2 = Math.max(num42, num43);
+        double numMax1 = Math.max(num41, num42);//obtener máximo
+        double numMax2 = Math.max(num42, num43);//obtener máximo
 
-        double numMax3 = Math.max(numMax1, numMax2);
+        double numMax3 = Math.max(numMax1, numMax2);//obtener máximo de los numeros maximos
 
         System.out.println("El numero mayor de los 3 números proporcionados \n es: " + numMax3);
 
@@ -129,25 +132,23 @@ public class Main {
         System.out.println("Numero 1: ");
         double num51 = sc8.nextDouble();
 
-        System.out.println("Numero 2: ");
+        System.out.println("Numero 2 ( en la división este valor no puede ser 0): ");
         double num52 = sc8.nextDouble();
 
-        System.out.println("La suma es : " + (num51 + num52));
-        System.out.println("La resta es : " + (num51 - num52));
+        System.out.println("La suma es: " + (num51 + num52)); //suma
+        System.out.println("La resta es: " + (num51 - num52)); //resta
 
 
-        double div = num51 / num52;
+        double div = num51 / num52; //division
+
+        System.out.println("La división es : " + (num51 / num52));
+
+//        if (div == 0) { //comprobar indeterminacion
+//            System.out.println("Esta división es indeterminada: " + num51 + "/" + num52);
+//        } else System.out.println("La división es : " + (num51 / num52));
 
 
-        if (div == 0) {
-            System.out.println("Esta división es indeterminada: " + num51 + "/" + num52);
-        } else System.out.println("La división es : " + (num51 / num52));
-
-
-
-
-
-        System.out.println("El producto es: " + (num51 + num52));
+        System.out.println("El producto es: " + (num51 * num52)); //multiplicar
 
 
         //ejercicio 12
@@ -176,6 +177,17 @@ public class Main {
 
         System.out.println("El numero es positivo: " + (num71 > (-1)));
         System.out.println("El numero es negativo: " + (num71 < 0));
-        
+
+        sc.close();
+        sc1.close();
+        sc2.close();
+        sc3.close();
+        sc4.close();
+        sc5.close();
+        sc6.close();
+        sc7.close();
+        sc8.close();
+        sc9.close();
+        sc10.close();
     }
 }
