@@ -59,50 +59,69 @@ public class Main {
 
         //ejercicio 7
 
-        Scanner sc1 = new Scanner(System.in);
+//        Scanner sc1 = new Scanner(System.in);
+//
+//        int nota;
+//        do {
+//            System.out.println("Inserte la nota a calificar: ");
+//            nota = sc1.nextInt();
+//                if(nota <= 0 || nota >10){
+//                    System.out.println("Escribe una nota entre 0-10");
+//                }
+//        } while (nota <= 0 || nota > 10);
+//
+//        switch (nota) {
+//            case 1:
+//                System.out.println("SUSPENSO");
+//                break;
+//            case 2:
+//                System.out.println("SUSPENSO");
+//                break;
+//            case 3:
+//                System.out.println("SUSPENSO");
+//                break;
+//            case 4:
+//                System.out.println("SUSPENSO");
+//                break;
+//            case 5:
+//                System.out.println("SUFICIENTE");
+//                break;
+//            case 6:
+//                System.out.println("SUFICIENTE");
+//                break;
+//            case 7:
+//                System.out.println("NOTABLE");
+//                break;
+//            case 8:
+//                System.out.println("NOTABLE");
+//                break;
+//            case 9:
+//                System.out.println("SOBRESALIENTE");
+//                break;
+//            case 10:
+//                System.out.println("SOBRESALIENTE");
+//                break;
+//            default:
+//                System.out.println("Escribe una nota entre 0-10");
+//        }
 
-        int nota;
-        do {
-            System.out.println("Inserte la nota a calificar: ");
-            nota = sc1.nextInt();
-                if(nota <= 0 || nota >10){
-                    System.out.println("Escribe una nota entre 0-10");
-                }
-        } while (nota <= 0 || nota > 10);
+        //ejercicio 8
+        Scanner sc2 = new Scanner(System.in);
+        int n;
 
-        switch (nota) {
-            case 1:
-                System.out.println("SUSPENSO");
-                break;
-            case 2:
-                System.out.println("SUSPENSO");
-                break;
-            case 3:
-                System.out.println("SUSPENSO");
-                break;
-            case 4:
-                System.out.println("SUSPENSO");
-                break;
-            case 5:
-                System.out.println("SUFICIENTE");
-                break;
-            case 6:
-                System.out.println("SUFICIENTE");
-                break;
-            case 7:
-                System.out.println("NOTABLE");
-                break;
-            case 8:
-                System.out.println("NOTABLE");
-                break;
-            case 9:
-                System.out.println("SOBRESALIENTE");
-                break;
-            case 10:
-                System.out.println("SOBRESALIENTE");
-                break;
-            default:
-                System.out.println("Escribe una nota entre 0-10");
+            System.out.println("Valor de N, para calcular factorial: ");
+            n = sc2.nextInt();
+
+        if(n > 0){
+            for(int i = 1; i <= n; i++){
+                int factorial = n * (n-i);
+                System.out.println("El factorial de N es: " + factorial);
+            }
+        }else{
+            System.out.println("N debe ser un numero entero positivo distinto de 0");
         }
+
+
+
     } //main
 } //class
