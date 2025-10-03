@@ -111,27 +111,14 @@ public class Main {
 //
 //            System.out.println("Valor de N, para calcular factorial: ");
 //            n = sc2.nextLong();
-//
-//        if(n > 0){
-//            for(long i = n; i <= 1; i++){
-//                System.out.println(i);
-//
-//                long exp = n;
-//                long factorial = (exp *= i);
-//            }
-//
-//        }else{
-//            System.out.println("N debe ser un numero entero positivo distinto de 0");
-//        }
 
-//        System.out.println("Valor de N, para calcular factorial: ");
-//        n = sc2.nextInt();
+        long factorial = 1;
 //
 //        if(n > 0){
-//            for(int i = 1; i <= n; i++){
-//                int factorial = n * (n-i);
-//                System.out.println("El factorial de N es: " + factorial);
+//            for(long i = n; i >= 0; i++){
+//              factorial += i;
 //            }
+//           System.out.println("N!: " + i);
 //        }else{
 //            System.out.println("N debe ser un numero entero positivo distinto de 0");
 //        }
