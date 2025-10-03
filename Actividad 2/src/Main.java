@@ -106,23 +106,23 @@ public class Main {
 //        }
 
         //ejercicio 8
-        Scanner sc2 = new Scanner(System.in);
-        long n;
-
-            System.out.println("Valor de N, para calcular factorial: ");
-            n = sc2.nextLong();
-
-        if(n > 0){
-            for(long i = n; i <= 1; i++){
-                System.out.println(i);
-
-                long exp = n;
-                long factorial = (exp *= i);
-            }
-
-        }else{
-            System.out.println("N debe ser un numero entero positivo distinto de 0");
-        }
+//        Scanner sc2 = new Scanner(System.in);
+//        long n;
+//
+//            System.out.println("Valor de N, para calcular factorial: ");
+//            n = sc2.nextLong();
+//
+//        if(n > 0){
+//            for(long i = n; i <= 1; i++){
+//                System.out.println(i);
+//
+//                long exp = n;
+//                long factorial = (exp *= i);
+//            }
+//
+//        }else{
+//            System.out.println("N debe ser un numero entero positivo distinto de 0");
+//        }
 
 //        System.out.println("Valor de N, para calcular factorial: ");
 //        n = sc2.nextInt();
@@ -135,6 +135,29 @@ public class Main {
 //        }else{
 //            System.out.println("N debe ser un numero entero positivo distinto de 0");
 //        }
+
+
+        //ejercicio 9
+        Scanner sc3 = new Scanner(System.in);
+
+        System.out.println("Escriba una hora (24h max): ");// 23 horas, 59 minutos, 59 segundos = 00:00:00
+        int hora = sc3.nextInt();
+
+        System.out.println("Escriba un minuto (0-59): "); //59 minutos y 59 seg = 1 hora mas
+        int min = sc3.nextInt();
+
+        System.out.println("Escriba un segundo (0-59): ");//59 segundos = 1 minuto mas
+        int seg = sc3.nextInt();
+
+        if(hora == 23 && min == 59 && seg == 59){
+            hora = 0;
+            min = 0;
+            seg = 0;
+        }
+
+        System.out.println(hora + ":" + min + ":" + seg);
+
+
 
     } //main
 } //class
