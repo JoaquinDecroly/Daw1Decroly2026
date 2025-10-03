@@ -107,21 +107,34 @@ public class Main {
 
         //ejercicio 8
         Scanner sc2 = new Scanner(System.in);
-        int n;
+        long n;
 
             System.out.println("Valor de N, para calcular factorial: ");
-            n = sc2.nextInt();
+            n = sc2.nextLong();
 
         if(n > 0){
-            for(int i = 1; i <= n; i++){
-                int factorial = n * (n-i);
-                System.out.println("El factorial de N es: " + factorial);
+            for(long i = n; i <= 1; i++){
+                System.out.println(i);
+
+                long exp = n;
+                long factorial = (exp *= i);
             }
+
         }else{
             System.out.println("N debe ser un numero entero positivo distinto de 0");
         }
 
-
+//        System.out.println("Valor de N, para calcular factorial: ");
+//        n = sc2.nextInt();
+//
+//        if(n > 0){
+//            for(int i = 1; i <= n; i++){
+//                int factorial = n * (n-i);
+//                System.out.println("El factorial de N es: " + factorial);
+//            }
+//        }else{
+//            System.out.println("N debe ser un numero entero positivo distinto de 0");
+//        }
 
     } //main
 } //class
