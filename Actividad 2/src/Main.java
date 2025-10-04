@@ -162,21 +162,24 @@ public class Main {
             }else{
                 hora1 = false;
             }
-        } while (hora1 && min1  && seg1);
+        } while (!hora1 || !min1 || !seg1);
 
-        
-        if (hora == 23 && min == 59 && seg == 59) {
+        seg++;//sumar 1 segundo
+
+        if (hora == 23 && min == 59 && seg == 59) { //si 
             hora = 0;
             min = 0;
             seg = 0;
-        } else if (seg == 59) {
-            min++;
-        } else if (min == 59) {
+            System.exit(0);
+        }else if(min == 59){//si minuto = 59, volver a 0 y sumar 1 a hora
+            min = 0;
             hora++;
-        } 
-        seg++;
-
-        System.out.println(hora + ":" + min + ":" + seg);
+        }else if(seg == 59){ //si segundos = 60, volver a 0 y sumar 1 a minuto
+            seg = 0;
+            min++;
+        }
+        
+        System.out.println(hora + ":" + min + ":" + seg); // mostrar hora formateada
 
 
     } //main
