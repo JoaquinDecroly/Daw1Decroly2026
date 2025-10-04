@@ -166,20 +166,19 @@ public class Main {
 
         seg++;//sumar 1 segundo
 
-        if (hora == 23 && min == 59 && seg == 59) { //si 
+        if (hora == 24) { //si 
             hora = 0;
             min = 0;
             seg = 0;
-            System.exit(0);
-        }else if(min == 59){//si minuto = 59, volver a 0 y sumar 1 a hora
+        }else if(min == 60){//si minuto = 60, volver a 0 y sumar 1 a hora
             min = 0;
             hora++;
-        }else if(seg == 59){ //si segundos = 60, volver a 0 y sumar 1 a minuto
+        }else if(seg == 60){ //si segundo = 60, volver a 0 y sumar 1 a minuto
             seg = 0;
             min++;
         }
         
-        System.out.println(hora + ":" + min + ":" + seg); // mostrar hora formateada
+        System.out.printf("%02d:%02d:%02d", hora, min, seg); // mostrar hora formateada con 2 digitos(%02d) + ":"
 
 
     } //main
