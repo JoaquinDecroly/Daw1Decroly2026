@@ -1,4 +1,5 @@
 import java.util.Scanner;
+//import java.time.temporal;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -112,7 +113,7 @@ public class Main {
 //            System.out.println("Valor de N, para calcular factorial: ");
 //            n = sc2.nextLong();
 
-        long factorial = 1;
+//        long factorial = 1;
 //
 //        if(n > 0){
 //            for(long i = n; i >= 0; i++){
@@ -126,24 +127,56 @@ public class Main {
 
         //ejercicio 9
         Scanner sc3 = new Scanner(System.in);
+        
+        int hora = 0;
+        int min = 0;
+        int seg = 0;
 
-        System.out.println("Escriba una hora (24h max): ");// 23 horas, 59 minutos, 59 segundos = 00:00:00
-        int hora = sc3.nextInt();
+        boolean hora1 = false;
+        boolean min1 = false;
+        boolean seg1 = false;
+        do {
+            System.out.println("Escriba una hora (24h max): ");// 23 horas, 59 minutos, 59 segundos = 00:00:00
+            hora = sc3.nextInt();
+            
+            if (hora >= 0 && hora <= 23) {
+                hora1 = true;
+                
+                System.out.println("Escriba un minuto (0-59): "); //59 minutos y 59 seg = 1 hora mas
+                min = sc3.nextInt();
+                
+                if (min >= 0 && min <= 59) {
+                    min1 = true;
+                    
+                    System.out.println("Escriba un segundo (0-59): ");//59 segundos = 1 minuto mas
+                    seg = sc3.nextInt();
 
-        System.out.println("Escriba un minuto (0-59): "); //59 minutos y 59 seg = 1 hora mas
-        int min = sc3.nextInt();
+                    if(seg >= 0 && seg <= 59){
+                        seg1 = true;
+                    }else{
+                        seg1 = false;
+                    }
+                }else{
+                    min1 = false;
+                }
+            }else{
+                hora1 = false;
+            }
+        } while (hora1 && min1  && seg1);
 
-        System.out.println("Escriba un segundo (0-59): ");//59 segundos = 1 minuto mas
-        int seg = sc3.nextInt();
-
-        if(hora == 23 && min == 59 && seg == 59){
+        
+        if (hora == 23 && min == 59 && seg == 59) {
             hora = 0;
             min = 0;
             seg = 0;
-        }
+        } else if (seg == 59) {
+            min++;
+        } else if (min == 59) {
+            hora++;
+        } 
+        seg++;
 
         System.out.println(hora + ":" + min + ":" + seg);
-
 
 
     } //main
