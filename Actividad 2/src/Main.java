@@ -227,53 +227,141 @@ public class Main {
 //        System.out.println("Hay un total de " + contN + " numeros negativos");
 
         //ejercicio 12
-        Scanner sc6 = new Scanner(System.in);
-        int[] nums2 = new int[50];
-        
-        
+//        Scanner sc6 = new Scanner(System.in);
+//        int[] nums2 = new int[50];
+//
+//
+//
+//        boolean hayNegativo1 = false;
+//        int contP1 = 0;//contador numeros positivos
+//        int contN1 = 0;//contador numeros negativos
+//
+//        int cont = 0; //contador total numeros
+//
+//        do {
+//            System.out.println("Inserte numeros(0 para finalizar): ");
+//            int numero = sc6.nextInt();
+//
+//            if (numero != 0) {
+//                nums2[cont] = numero;
+//                cont++;
+//            } else {
+//                break; // Salir del bucle cuando se introduce 0
+//            }
+//
+//        } while (cont < 50);
+//
+//
+//
+//        for(int i = 0;i < cont; i++){//recorrer array
+//           if(nums2[i] < 0){
+//                hayNegativo1 = true;
+//                contN1++;
+//            }else if(nums2[i] > 0){
+//                contP1++;
+//            }
+//        }
+//
+//        System.out.println("El array tiene un total de: " + cont + " numeros");
+//
+//        if(hayNegativo1){
+//            System.out.println("Hay al menos un numero negativo");
+//        }else{
+//            System.out.println("No hay numeros negativos");
+//        }
+//
+//        System.out.println("Hay un total de " + contP1 + " numeros positivos (el 0 no es contado)");
+//        System.out.println("Hay un total de " + contN1 + " numeros negativos");
 
-        boolean hayNegativo1 = false;
-        int contP1 = 0;//contador numeros positivos
-        int contN1 = 0;//contador numeros negativos
+//        //ejercicio 13
+//        Scanner sc7 = new Scanner(System.in);
+//
+//        int suma = 0; //suma 0
+//        int producto = 1; //producto 1, para que al multiplicar, se stackeen
+//
+//        for(int i = 1;i < 11; i++){ //bucle i =1 < 11 (1-10)
+//            suma += i;
+//            producto *= i;
+//        }
+//        System.out.println("El producto de los 10 primerosnumeros naturales es: " + producto);
+//        System.out.println("La suma de los 10  primeros numeros naturales es: " + suma);
 
-        int cont = 0; //contador total numeros
-        
-        do {
-            System.out.println("Inserte numeros(0 para finalizar): ");
-            int numero = sc6.nextInt();
 
-            if (numero != 0) {
-                nums2[cont] = numero;
-                cont++;
-            } else {
-                break; // Salir del bucle cuando se introduce 0
-            }
+        //ejercicio 14
+        //CalcularSalario (nombre, salario bruto y neto + tasas)
 
-        } while (cont < 50);
-        
-        
+        //35 horas = tarifa normal
+        //>35 horas = 1.5 la tarifa normal
 
-        for(int i = 0;i < cont; i++){//recorrer array
-           if(nums2[i] < 0){
-                hayNegativo1 = true;
-                contN1++;
-            }else if(nums2[i] > 0){
-                contP1++;
-            }
-        }
+        //<500 € = libre de impuestos
+        //>500 <= 900€ = 25% impuestos
+        //>900€ = 45% impuestos
 
-        System.out.println("El array tiene un total de: " + cont + " numeros");
+//		Si el número de horas trabajadas es menor o igual a 35:
+//			Salario Bruto = Horas Trabajadas x Tarifa Normal
+//			Si el número de horas trabajadas es mayor a 35:
+//			Salario Bruto = (35 x Tarifa Normal) + ((Horas Trabajadas - 35) x Tarifa Normal x 1.5)
+//			Impuestos
+//
+//			Si el Salario Bruto es menor o igual a 500 euros:
+//			Impuestos = 0
+//			Si el Salario Bruto es mayor a 500 euros pero menor o igual a 900 euros:
+//			Impuestos = (Salario Bruto - 500) x 0.25
+//			Si el Salario Bruto es mayor a 900 euros:
+//			Impuestos = (400 x 0.25) + (Salario Bruto - 900) x 0.45
+//			Salario Neto
+//
+//			Salario Neto = Salario Bruto - Impuestos
 
-        if(hayNegativo1){
-            System.out.println("Hay al menos un numero negativo");
+            Scanner sc8 = new Scanner(System.in);
+
+            double impuestos, tasas, pagoXhora;
+            String nombre;
+            int horas;
+            double salarioNeto = 0, salarioBruto = 0;
+
+
+        System.out.println("Nombre: ");
+        nombre = sc8.nextLine();
+
+        System.out.println("Horas: ");
+        horas = sc8.nextInt();
+
+
+        System.out.println("Pago por horas: ");
+        pagoXhora = sc8.nextDouble();
+
+
+        if(horas > 35){
+            salarioBruto = horas * pagoXhora;
+            salarioBruto = salarioNeto;
         }else{
-            System.out.println("No hay numeros negativos");
+            salarioBruto = (horas * pagoXhora) + ((horas - 35) * pagoXhora * 1.5);
         }
-        
-        System.out.println("Hay un total de " + contP1 + " numeros positivos (el 0 no es contado)");
-        System.out.println("Hay un total de " + contN1 + " numeros negativos");
-        
-        
-        
+
+        if(salarioBruto <= 500){
+            impuestos = 0;
+            salarioNeto = salarioBruto;
+            System.out.println("El salario bruto es: " + salarioBruto);
+            System.out.println("El salario neto es: " + salarioNeto);
+            System.out.println("Los impuestos son: " + impuestos);
+        } else if (salarioBruto > 500 && salarioBruto <= 900) {
+            impuestos = salarioBruto * 0.75;
+            salarioBruto = salarioNeto;
+
+            System.out.println("El salario bruto es: " + salarioBruto);
+            System.out.println("El salario neto es: " + salarioNeto);
+            System.out.println("Los impuestos son: " + impuestos);
+        }else{
+            impuestos = salarioBruto * 0.55;
+            salarioNeto = salarioBruto - impuestos;
+
+            System.out.println("El salario bruto es: " + salarioBruto);
+            System.out.println("El salario neto es: " + salarioNeto);
+            System.out.println("Los impuestos son: " + impuestos);
+
+        }
+
+
     } //main
 } //class
