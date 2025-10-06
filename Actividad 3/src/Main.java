@@ -52,6 +52,14 @@ public class Main {
                     double num41 = sc2.nextDouble();
                     System.out.println("Numero 2: ");
                     double num42 = sc2.nextDouble();
+
+                    double division = num41 + num42;
+                        if(num42 == 0){
+                            System.out.println("La division con determinador 0, es indeterminado");
+                        }else{
+                            System.out.println("La division es: " + division);
+                        }
+
                 break;
                 case "5":
                     break;
