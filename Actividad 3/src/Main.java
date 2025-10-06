@@ -2,9 +2,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-         //ejercicio 1
+        //ejercicio 1
         Scanner sc1 = new Scanner(System.in);
 
+
+        int cantidad;
+        do {
+            System.out.println("Introduzca la cantidad de billetes para ver el cambio: ");
+            cantidad = sc1.nextInt();
+
+        } while ((cantidad %= 5) != 0);
+
+
+        cantidad = cantidad %= 500;
+        int billetes500 = cantidad / 500;
 
 
         //ejercicio 2
@@ -12,7 +23,7 @@ public class Main {
 
         String option = "";
 
-        do{
+        do {
             System.out.println("1. Sumar");
             System.out.println("2. Restar");
             System.out.println("3. Multiplicar");
@@ -20,7 +31,7 @@ public class Main {
             System.out.println("5. Salir");
             option = sc2.nextLine();
 
-            switch(option){
+            switch (option) {
                 case "1":
                     System.out.println("Numero 1: ");
                     double num1 = sc2.nextDouble();
@@ -28,7 +39,7 @@ public class Main {
                     double num2 = sc2.nextDouble();
                     double suma = num1 + num2;
                     System.out.println("La suma es: " + suma);
-                break;
+                    break;
                 case "2":
                     System.out.println("Numero 1: ");
                     double num21 = sc2.nextDouble();
@@ -37,7 +48,7 @@ public class Main {
 
                     double resta = num21 + num22;
                     System.out.println("La resta es: " + resta);
-                break;
+                    break;
                 case "3":
                     System.out.println("Numero 1: ");
                     double num31 = sc2.nextDouble();
@@ -46,7 +57,7 @@ public class Main {
 
                     double producto = num31 * num32;
                     System.out.println("El producto es: " + producto);
-                break;
+                    break;
                 case "4":
                     System.out.println("Numero 1: ");
                     double num41 = sc2.nextDouble();
@@ -54,20 +65,20 @@ public class Main {
                     double num42 = sc2.nextDouble();
 
                     double division = num41 + num42;
-                        if(num42 == 0){
-                            System.out.println("La division con determinador 0, es indeterminado");
-                        }else{
-                            System.out.println("La division es: " + division);
-                        }
+                    if (num42 == 0) {
+                        System.out.println("La division con determinador 0, es indeterminado");
+                    } else {
+                        System.out.println("La division es: " + division);
+                    }
 
-                break;
+                    break;
                 case "5":
                     break;
                 default:
                     System.out.println("Escoja una opcion correcta");
-                break;
+                    break;
             }
 
-        }while(!option.equals("5"));
+        } while (!option.equals("5"));
     }
 }
