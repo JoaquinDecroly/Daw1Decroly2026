@@ -14,8 +14,47 @@ public class Main {
         } while ((cantidad %= 5) != 0);
 
 
-        cantidad = cantidad %= 500;
+        cantidad %= 500;
         int billetes500 = cantidad / 500;
+            if(billetes500 > 0){
+                System.out.println("Billetes 500: ");
+            }
+
+        cantidad %= 200;
+        int billetes200 = cantidad / 200;
+            if(billetes200 > 0){
+                System.out.println("Billetes 200: ");
+            }
+
+        cantidad %= 100;
+        int billetes100 = cantidad / 100;
+            if(billetes100 > 0){
+                System.out.println("Billetes 100: ");
+            }
+            
+        cantidad %= 50;
+        int billetes50 = cantidad / 50;
+            if(billetes50 > 0){
+                System.out.println("Billetes 50: ");
+            }
+
+        cantidad %= 20;
+        int billetes20 = cantidad / 20;
+            if(billetes20 > 0){
+                System.out.println("Billetes 20: ");
+            }
+
+        cantidad %= 10;
+        int billetes10 = cantidad / 10;
+            if(billetes10 > 0){
+                System.out.println("Billetes 10: ");
+            }
+
+        cantidad %= 5;
+        int billetes5 = cantidad / 5;
+            if(billetes5 > 0){
+                System.out.println("Billetes 5: ");
+            }
 
 
         //ejercicio 2
