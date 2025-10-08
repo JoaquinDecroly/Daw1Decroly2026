@@ -31,17 +31,14 @@ public class Main {
 //        }
 //
 //        ejercicio 4
-//        for(int j = 0; j <= 200; j++){
-//            //bucle para sumar de 1 en 1, hasta 200
-//            //a la hora de imprimir suma 1 más
-//        System.out.println("Los valores pares de j, sumando de 2 en 2, son: " + j++);
+//        for(int j = 0; j <= 200; j += 2){
+//            //bucle para sumar de 2 en 2, hasta 200
+//        System.out.println("Los valores pares de j, sumando de 2 en 2, son: " + j);
 //        }
 //
 //        //ejercicio 5
 //        for(int z = 0; z <= 200; z++){
-//            int cont = 2; //contador con valor 2
-//
-//            if(z % cont == 0){ //resto de z / cont (2), si es igual a 0, se imprime
+//            if(z % 2 == 0){ //resto de z / 2 , es igual a 0, se imprime
 //                System.out.println("Los valores pares de j, sumando de 1 en 1, son: " + z);
 //            }
 //        }
@@ -53,21 +50,20 @@ public class Main {
 //        double N = sc.nextDouble();
 //
 //        for(int i = 0;i <= N; i++){
-//            System.out.println(" Los numeros hasta N son: " + i);
+//            System.out.println(i);
 //        }
 //
 //        ejercicio 7
-//
 //        Scanner sc4 = new Scanner(System.in);
 //
-//        int nota;
+//        double nota;
 //        do {
 //            System.out.println("Inserte la nota a calificar: ");
-//            nota = sc1.nextInt();
-//                if(nota <= 0 || nota >10){
+//            nota = sc1.nextDouble();
+//                if(nota <= 0 || nota > 10){
 //                    System.out.println("Escribe una nota entre 0-10");
 //                }
-//        } while (nota <= 0 || nota > 10);
+//        } while (nota >= 0 || nota <= 10);
 //
 //        switch (nota) {
 //            case 1:
@@ -106,22 +102,18 @@ public class Main {
 //
 //        //ejercicio 8
 //        Scanner sc5 = new Scanner(System.in);
-//        long n;
+
+//        long factorial = 1
+
 //
 //            System.out.println("Valor de N, para calcular factorial: ");
-//            n = sc2.nextLong();
+//            long n = sc2.nextLong();
+
+//            for(long i = 1; i<= n; i++){
+//                factorial *= i;
+//              }
+//              System.out.println("El factorial de " + n + " es:");
 //
-//        long factorial = 1;
-//
-//        if(n > 0) {
-//            long i;
-//            for (i = n; i >= 0; i++) {
-//                factorial += i;
-//            }
-//            System.out.println("N!: " + i);
-//        }else{
-//            System.out.println("N debe ser un numero entero positivo distinto de 0");
-//        }
 //
 //
 //        //ejercicio 9
