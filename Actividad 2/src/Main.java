@@ -107,22 +107,23 @@ public class Main {
 //        }
 
         //ejercicio 8
-//        Scanner sc2 = new Scanner(System.in);
-//        long n;
-//
-//            System.out.println("Valor de N, para calcular factorial: ");
-//            n = sc2.nextLong();
+        Scanner sc2 = new Scanner(System.in);
+        long n;
 
-//        long factorial = 1;
-//
-//        if(n > 0){
-//            for(long i = n; i >= 0; i++){
-//              factorial += i;
-//            }
-//           System.out.println("N!: " + i);
-//        }else{
-//            System.out.println("N debe ser un numero entero positivo distinto de 0");
-//        }
+            System.out.println("Valor de N, para calcular factorial: ");
+            n = sc2.nextLong();
+
+        long factorial = 1;
+
+        if(n > 0) {
+            long i;
+            for (i = n; i >= 0; i++) {
+                factorial += i;
+            }
+            System.out.println("N!: " + i);
+        }else{
+            System.out.println("N debe ser un numero entero positivo distinto de 0");
+        }
 
 
 //        //ejercicio 9
@@ -203,7 +204,7 @@ public class Main {
 //        }else{
 //            System.out.println("No hay numeros negativos");
 //        }
-        
+
 //        //ejercicio 11
 //        Scanner sc5 = new Scanner(System.in);
 //        int[] nums1 = new int[10];
