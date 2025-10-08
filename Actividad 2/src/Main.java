@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //ejercicio 1
+//        ejercicio 1
 //        Scanner sc1 = new Scanner(System.in);
 //
 //        System.out.println("Edad: ");
@@ -31,8 +31,8 @@ public class Main {
 //        for(int i = 0; i < 21; i++){
 //            System.out.println("El valor de i es: " + i);
 //        }
-
-        //ejercicio 4
+//
+//        ejercicio 4
 //        for(int j = 0; j <= 200; j++){
 //            //bucle para sumar de 1 en 1, hasta 200
 //            //a la hora de imprimir suma 1 más
@@ -47,9 +47,9 @@ public class Main {
 //                System.out.println("Los valores pares de j, sumando de 1 en 1, son: " + z);
 //            }
 //        }
-
-        //ejercicio 6
-//        Scanner sc = new Scanner (System.in);
+//
+//        ejercicio 6
+//        Scanner sc3 = new Scanner (System.in);
 //
 //        System.out.println("Introduce N: ");
 //        double N = sc.nextDouble();
@@ -57,10 +57,10 @@ public class Main {
 //        for(int i = 0;i <= N; i++){
 //            System.out.println(" Los numeros hasta N son: " + i);
 //        }
-
-        //ejercicio 7
-
-//        Scanner sc1 = new Scanner(System.in);
+//
+//        ejercicio 7
+//
+//        Scanner sc4 = new Scanner(System.in);
 //
 //        int nota;
 //        do {
@@ -105,30 +105,30 @@ public class Main {
 //            default:
 //                System.out.println("Escribe una nota entre 0-10");
 //        }
-
-        //ejercicio 8
-        Scanner sc2 = new Scanner(System.in);
-        long n;
-
-            System.out.println("Valor de N, para calcular factorial: ");
-            n = sc2.nextLong();
-
-        long factorial = 1;
-
-        if(n > 0) {
-            long i;
-            for (i = n; i >= 0; i++) {
-                factorial += i;
-            }
-            System.out.println("N!: " + i);
-        }else{
-            System.out.println("N debe ser un numero entero positivo distinto de 0");
-        }
-
-
+//
+//        //ejercicio 8
+//        Scanner sc5 = new Scanner(System.in);
+//        long n;
+//
+//            System.out.println("Valor de N, para calcular factorial: ");
+//            n = sc2.nextLong();
+//
+//        long factorial = 1;
+//
+//        if(n > 0) {
+//            long i;
+//            for (i = n; i >= 0; i++) {
+//                factorial += i;
+//            }
+//            System.out.println("N!: " + i);
+//        }else{
+//            System.out.println("N debe ser un numero entero positivo distinto de 0");
+//        }
+//
+//
 //        //ejercicio 9
-//        Scanner sc3 = new Scanner(System.in);
-//        
+//        Scanner sc6 = new Scanner(System.in);
+//
 //        int hora = 0;
 //        int min = 0;
 //        int seg = 0;
@@ -139,16 +139,16 @@ public class Main {
 //        do {
 //            System.out.println("Escriba una hora (24h max): ");// 23 horas, 59 minutos, 59 segundos = 00:00:00
 //            hora = sc3.nextInt();
-//            
+//
 //            if (hora >= 0 && hora <= 23) {
 //                hora1 = true;
-//                
+//
 //                System.out.println("Escriba un minuto (0-59): "); //59 minutos y 59 seg = 1 hora mas
 //                min = sc3.nextInt();
-//                
+//
 //                if (min >= 0 && min <= 59) {
 //                    min1 = true;
-//                    
+//
 //                    System.out.println("Escriba un segundo (0-59): ");//59 segundos = 1 minuto mas
 //                    seg = sc3.nextInt();
 //
@@ -167,7 +167,7 @@ public class Main {
 //
 //        seg++;//sumar 1 segundo
 //
-//        if (hora == 24) { //si 
+//        if (hora == 24) { //si
 //            hora = 0;
 //            min = 0;
 //            seg = 0;
@@ -178,35 +178,35 @@ public class Main {
 //            seg = 0;
 //            min++;
 //        }
-//        
+//
 //        System.out.printf("%02d:%02d:%02d", hora, min, seg); // mostrar hora formateada con 2 digitos(%02d) + ":"
 //
 //        //ejercicio 10
-//        Scanner sc4 = new Scanner(System.in);
+//        Scanner sc7 = new Scanner(System.in);
 //        int[] nums = new int[10];
-//        
+//
 //        boolean hayNegativo = false;
-//        
+//
 //        for(int i = 0; i < nums.length; i++){ //bucle leer numero con longitud array nums(10)
 //            System.out.println("Inserte 10 numeros: ");
 //                nums[i] = sc4.nextInt();
 //        }
-//        
+//
 //        for(int num : nums){//recorrer array
 //            if(num < 0){
 //                hayNegativo = true;
 //                break;
 //            }
 //        }
-//        
+//
 //        if(hayNegativo){
 //            System.out.println("Hay al menos un numero negativo");
 //        }else{
 //            System.out.println("No hay numeros negativos");
 //        }
-
+//
 //        //ejercicio 11
-//        Scanner sc5 = new Scanner(System.in);
+//        Scanner sc8 = new Scanner(System.in);
 //        int[] nums1 = new int[10];
 //
 //        int contP = 0;
@@ -226,9 +226,9 @@ public class Main {
 //        }
 //        System.out.println("Hay un total de " + contP + " numeros positivos");
 //        System.out.println("Hay un total de " + contN + " numeros negativos");
-
-        //ejercicio 12
-//        Scanner sc6 = new Scanner(System.in);
+//
+//        ejercicio 12
+//        Scanner sc9 = new Scanner(System.in);
 //        int[] nums2 = new int[50];
 //
 //
@@ -273,7 +273,7 @@ public class Main {
 //
 //        System.out.println("Hay un total de " + contP1 + " numeros positivos (el 0 no es contado)");
 //        System.out.println("Hay un total de " + contN1 + " numeros negativos");
-
+//
 //        //ejercicio 13
 //        Scanner sc7 = new Scanner(System.in);
 //
@@ -286,82 +286,82 @@ public class Main {
 //        }
 //        System.out.println("El producto de los 10 primerosnumeros naturales es: " + producto);
 //        System.out.println("La suma de los 10  primeros numeros naturales es: " + suma);
-
-
-        //ejercicio 14
-        //CalcularSalario (nombre, salario bruto y neto + tasas)
-
-        //35 horas = tarifa normal
-        //>35 horas = 1.5 la tarifa normal
-
-        //<500 € = libre de impuestos
-        //>500 <= 900€ = 25% impuestos
-        //>900€ = 45% impuestos
-
-//		Si el número de horas trabajadas es menor o igual a 35:
-//			Salario Bruto = Horas Trabajadas x Tarifa Normal
-//			Si el número de horas trabajadas es mayor a 35:
-//			Salario Bruto = (35 x Tarifa Normal) + ((Horas Trabajadas - 35) x Tarifa Normal x 1.5)
-//			Impuestos
 //
-//			Si el Salario Bruto es menor o igual a 500 euros:
-//			Impuestos = 0
-//			Si el Salario Bruto es mayor a 500 euros pero menor o igual a 900 euros:
-//			Impuestos = (Salario Bruto - 500) x 0.25
-//			Si el Salario Bruto es mayor a 900 euros:
-//			Impuestos = (400 x 0.25) + (Salario Bruto - 900) x 0.45
-//			Salario Neto
 //
-//			Salario Neto = Salario Bruto - Impuestos
-
-            Scanner sc8 = new Scanner(System.in);
-
-            double impuestos, tasas, pagoXhora;
-            String nombre;
-            int horas;
-            double salarioNeto = 0, salarioBruto = 0;
-
-
-        System.out.println("Nombre: ");
-        nombre = sc8.nextLine();
-
-        System.out.println("Horas: ");
-        horas = sc8.nextInt();
-
-
-        System.out.println("Pago por horas: ");
-        pagoXhora = sc8.nextDouble();
-
-
-        if(horas > 35){
-            salarioBruto = horas * pagoXhora;
-            salarioBruto = salarioNeto;
-        }else{
-            salarioBruto = (horas * pagoXhora) + ((horas - 35) * pagoXhora * 1.5);
-        }
-
-        if(salarioBruto <= 500){
-            impuestos = 0;
-            salarioNeto = salarioBruto;
-            System.out.println("El salario bruto es: " + salarioBruto);
-            System.out.println("El salario neto es: " + salarioNeto);
-            System.out.println("Los impuestos son: " + impuestos);
-        } else if (salarioBruto > 500 && salarioBruto <= 900) {
-            impuestos = salarioBruto * 0.75;
-            salarioBruto = salarioNeto;
-
-            System.out.println("El salario bruto es: " + salarioBruto);
-            System.out.println("El salario neto es: " + salarioNeto);
-            System.out.println("Los impuestos son: " + impuestos);
-        }else{
-            impuestos = salarioBruto * 0.55;
-            salarioNeto = salarioBruto - impuestos;
-
-            System.out.println("El salario bruto es: " + salarioBruto);
-            System.out.println("El salario neto es: " + salarioNeto);
-            System.out.println("Los impuestos son: " + impuestos);
-
-        }
+//        //ejercicio 14
+//        //CalcularSalario (nombre, salario bruto y neto + tasas)
+//
+//        //35 horas = tarifa normal
+//        //>35 horas = 1.5 la tarifa normal
+//
+//        //<500 € = libre de impuestos
+//        //>500 <= 900€ = 25% impuestos
+//        //>900€ = 45% impuestos
+//
+////		Si el número de horas trabajadas es menor o igual a 35:
+////			Salario Bruto = Horas Trabajadas x Tarifa Normal
+////			Si el número de horas trabajadas es mayor a 35:
+////			Salario Bruto = (35 x Tarifa Normal) + ((Horas Trabajadas - 35) x Tarifa Normal x 1.5)
+////			Impuestos
+////
+////			Si el Salario Bruto es menor o igual a 500 euros:
+////			Impuestos = 0
+////			Si el Salario Bruto es mayor a 500 euros pero menor o igual a 900 euros:
+////			Impuestos = (Salario Bruto - 500) x 0.25
+////			Si el Salario Bruto es mayor a 900 euros:
+////			Impuestos = (400 x 0.25) + (Salario Bruto - 900) x 0.45
+////			Salario Neto
+////
+////			Salario Neto = Salario Bruto - Impuestos
+//
+//            Scanner sc10 = new Scanner(System.in);
+//
+//            double impuestos, tasas, pagoXhora;
+//            String nombre;
+//            int horas;
+//            double salarioNeto = 0, salarioBruto = 0;
+//
+//
+//        System.out.println("Nombre: ");
+//        nombre = sc8.nextLine();
+//
+//        System.out.println("Horas: ");
+//        horas = sc8.nextInt();
+//
+//
+//        System.out.println("Pago por horas: ");
+//        pagoXhora = sc8.nextDouble();
+//
+//
+//        if(horas > 35){
+//            salarioBruto = horas * pagoXhora;
+//            salarioBruto = salarioNeto;
+//        }else{
+//            salarioBruto = (horas * pagoXhora) + ((horas - 35) * pagoXhora * 1.5);
+//        }
+//
+//        if(salarioBruto <= 500){
+//            impuestos = 0;
+//            salarioNeto = salarioBruto;
+//            System.out.println("El salario bruto es: " + salarioBruto);
+//            System.out.println("El salario neto es: " + salarioNeto);
+//            System.out.println("Los impuestos son: " + impuestos);
+//        } else if (salarioBruto > 500 && salarioBruto <= 900) {
+//            impuestos = salarioBruto * 0.75;
+//            salarioBruto = salarioNeto;
+//
+//            System.out.println("El salario bruto es: " + salarioBruto);
+//            System.out.println("El salario neto es: " + salarioNeto);
+//            System.out.println("Los impuestos son: " + impuestos);
+//        }else{
+//            impuestos = salarioBruto * 0.55;
+//            salarioNeto = salarioBruto - impuestos;
+//
+//            System.out.println("El salario bruto es: " + salarioBruto);
+//            System.out.println("El salario neto es: " + salarioNeto);
+//            System.out.println("Los impuestos son: " + impuestos);
+//
+//        }
 
 
     } //main
