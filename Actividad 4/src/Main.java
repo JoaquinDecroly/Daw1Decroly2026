@@ -7,9 +7,7 @@ public class Main {
         Scanner sc1 = new Scanner(System.in);
 
         int[] nums1 = new int[10];
-
-
-
+        
         System.out.println("Inserte 10 numeros");
 
         int i;
@@ -17,7 +15,7 @@ public class Main {
             System.out.println("Numero " + i+ "/9");
             nums1[i] = sc1.nextInt();
         }
-//        for(num; nums1){
+//        for(nums1 : num){
 //            System.out.println(num);
 //        }
 
