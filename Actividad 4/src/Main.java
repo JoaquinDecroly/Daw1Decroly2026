@@ -12,12 +12,15 @@ public class Main {
 
         int i;
         for (i = 0; i < nums1.length; i++) {
-            System.out.println("Numero " + i+ "/9");
+            System.out.println("Numero " + i + "/10");
             nums1[i] = sc1.nextInt();
         }
-//        for(nums1 : num){
-//            System.out.println(num);
-//        }
+
+
+        System.out.println("\n Los numeros insertados son: \n");
+        for(int num : nums1){
+            System.out.println(num);
+        }
 
 
     }
