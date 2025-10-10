@@ -189,43 +189,54 @@ public class Main {
 //        System.out.println("Maximo " + max);
 //        System.out.println("Minimo " + min);
 
-//        //ejercicio 11 (CORREGIR)
+//        //ejercicio 11 
 //        Scanner sc11 = new Scanner(System.in);
 //        int[] array5 = new int[100];
 //        int[] array6 = new int[100];
 //
-//        for(int i = 1;i <= 100;i++){
-//            array5[i] = sc11.nextInt();
+//        for(int i = 0;i < array5.length;i++){
+//            array5[i] = i + 1;
 //        }
 //
-//        for(int i = array5.length; i > 1; i--){
-//            array6[i] = sc11.nextInt();
+//        for (int i = 0; i < array5.length; i++) {
+//            array6[i] = array5[array5.length - 1 - i];
 //        }
 //
-//        for(int num : array5){
-//            System.out.println(num);
+//       for(int num : array5){
+//            System.out.print(num + " ");
+//            if((num % 30) == 0){
+//                System.out.println("\n");
+//            }else if(num == 100){
+//                System.out.println("\n");
+//            }
 //        }
 //
 //        for(int num : array6){
-//            System.out.println(num);
+//            System.out.print(num + " ");
+//            if((num % 30) == 0){
+//                System.out.println("\n");
+//            }
 //        }
 
-//        //ejercicio 12 (CORREGIR)
+        //ejercicio 12 
 //        Scanner sc12 = new Scanner(System.in);
+//        int[] array7 = new int[10];
+//        
 //        String opcion;
 //        do {
-//            System.out.println("a. Mostrar valores \n b. Introducir Valor \n c. Salir");
+//            System.out.println("\na. Mostrar valores \nb. Introducir Valor \nc. Salir");
 //            opcion = sc12.nextLine();
 //
-//            int[] array7 = new int[10];
+//
 //
 //            switch (opcion) {
 //                case "a":
 //                    for (int num : array7) {
-//                        System.out.println(num);
+//                        System.out.print(num + " ");
 //                    }
 //                    break;
 //                case "b":
+//                    sc12 = new Scanner(System.in);
 //                    System.out.println("Valor V ");
 //                    int v = sc12.nextInt();
 //                    int p;
@@ -235,6 +246,8 @@ public class Main {
 //                    } while (!(p >= 0 && p <= 9));
 //
 //                    array7[p] = v;
+//                        sc12.nextLine();
+//
 //                    break;
 //                case "c":
 //                    break;
@@ -242,7 +255,7 @@ public class Main {
 //        } while (!opcion.equals("c"));
 
 
-//        //ejercicio 13 (CORREGIR)
+//        //ejercicio 13 
 //        Scanner sc13 = new Scanner(System.in);
 //
 //        System.out.println("Valor inicio ");
@@ -255,28 +268,25 @@ public class Main {
 //        int N = sc13.nextInt();
 //
 //        int[] nums = new int[N];
-//        int suma = 0;
-//
-//        for(int i = V; i < nums.length; i++){
-//            nums[0] = V;
-//            suma += I;
-//            nums[i] = suma;
-//
+//          nums[0] = V;
+//        
+//        for(int i = 1; i < nums.length; i++){
+//            nums[i] = nums[i - 1] + I;
 //        }
 //
 //        for(int num : nums){
-//            System.out.println(num);
+//            System.out.print(num + " ");
 //        }
 
 
-//        //ejercicio 14 (CORREGIR)
+//        //ejercicio 14 
 //        for (int i = 1; i <= 10; i++) {
 //            for (int j = 1; j <= i; j++) {
-//                System.out.print(i);
+//                System.out.print(i + " ");
+//                    if((i % j)== 0){
+//                        System.out.println();
+//                    }
 //            }
 //        }
-
     }
-    
-    
 }
