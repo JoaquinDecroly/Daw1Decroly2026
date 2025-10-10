@@ -156,16 +156,93 @@ public class Main {
 //                System.out.println(i);
 //            }
 //        }
-      
 
-            
-                
-            
-        
+//        //ejercicio 10
+//        Scanner sc10 = new Scanner(System.in);
+//
+//
+//        System.out.println("Introduzca N ");
+//        double N = sc10.nextDouble();
+//
+//        double suma = 0;
+//
+//        double[] altura = new double[(int)N];
+//
+//        double media = 0;
+//        double max = 0;
+//        double min = 0;
+//
+//        for (int i = 0; i < altura.length; i++) {
+//            altura[i] += suma;
+//            media = suma / altura.length;
+//            max = Arrays.stream(altura).max().orElse(0.0);
+//            min = Arrays.stream(altura).min().orElse(0.0);
+//
+//            if(altura[i] >= media){
+//                System.out.println("Mayor o igual a la media " + altura[i]);
+//            }else{
+//                System.out.println("Menor o igual a la media " + altura[i]);
+//            }
+//        }
+//
+//        System.out.println("Media " + media);
+//        System.out.println("Maximo " + max);
+//        System.out.println("Minimo " + min);
+
+//        //ejercicio 11 (CORREGIR)
+//        Scanner sc11 = new Scanner(System.in);
+//        int[] array5 = new int[100];
+//        int[] array6 = new int[100];
+//
+//        for(int i = 1;i <= 100;i++){
+//            array5[i] = sc11.nextInt();
+//        }
+//
+//        for(int i = array5.length; i > 1; i--){
+//            array6[i] = sc11.nextInt();
+//        }
+//
+//        for(int num : array5){
+//            System.out.println(num);
+//        }
+//
+//        for(int num : array6){
+//            System.out.println(num);
+//        }
+
+//        //ejercicio 12 (CORREGIR)
+//        Scanner sc12 = new Scanner(System.in);
+//        String opcion;
+//        do {
+//            System.out.println("a. Mostrar valores \n b. Introducir Valor \n c. Salir");
+//            opcion = sc12.nextLine();
+//
+//            int[] array7 = new int[10];
+//
+//            switch (opcion) {
+//                case "a":
+//                    for (int num : array7) {
+//                        System.out.println(num);
+//                    }
+//                    break;
+//                case "b":
+//                    System.out.println("Valor V ");
+//                    int v = sc12.nextInt();
+//                    int p;
+//                    do {
+//                        System.out.println("Posicion P (0-9)");
+//                        p = sc12.nextInt();
+//                    } while (!(p >= 0 && p <= 9));
+//
+//                    array7[p] = v;
+//                    break;
+//                case "c":
+//                    break;
+//            }
+//        } while (!opcion.equals("c"));
 
 
-
-
+        //ejercicio 13
 
     }
     
