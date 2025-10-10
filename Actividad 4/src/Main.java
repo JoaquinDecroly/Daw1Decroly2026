@@ -242,7 +242,33 @@ public class Main {
 //        } while (!opcion.equals("c"));
 
 
-        //ejercicio 13
+//        //ejercicio 13 (CORREGIR)
+//        Scanner sc13 = new Scanner(System.in);
+//
+//        System.out.println("Valor inicio ");
+//        int V = sc13.nextInt();
+//
+//        System.out.println("Intervalo ");
+//        int I = sc13.nextInt();
+//
+//        System.out.println("Valor N (espacio a crear) ");
+//        int N = sc13.nextInt();
+//
+//        int[] nums = new int[N];
+//        int suma = 0;
+//
+//        for(int i = V; i < nums.length; i++){
+//            nums[0] = V;
+//            suma += I;
+//            nums[i] = suma;
+//
+//        }
+//
+//        for(int num : nums){
+//            System.out.println(num);
+//        }
+
+
 
     }
     
