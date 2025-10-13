@@ -173,27 +173,45 @@ public class Main {
 //
 //        //ejercicio 10
 //        Scanner sc7 = new Scanner(System.in);
-//        int[] nums = new int[10];
+///        int[] nums = new int[10];
+///
+///       boolean hayNegativo = false;
+///
+///        for(int i = 0; i < nums.length; i++){ //bucle leer numero con longitud array nums(10)
+///            System.out.println("Inserte 10 numeros: ");
+///                nums[i] = sc4.nextInt();
+///        }
 //
+///        for(int num : nums){//recorrer array
+///            if(num < 0){
+///                hayNegativo = true;
+///                break;
+///            }
+///        }
+//
+///        if(hayNegativo){
+///            System.out.println("Hay al menos un numero negativo");
+///        }else{
+///            System.out.println("No hay numeros negativos");
+///        }
 //        boolean hayNegativo = false;
 //
-//        for(int i = 0; i < nums.length; i++){ //bucle leer numero con longitud array nums(10)
+//        for(int i = 0; i < 10; i++){ //bucle leer numero con longitud array nums(10)
 //            System.out.println("Inserte 10 numeros: ");
-//                nums[i] = sc4.nextInt();
+//                int n = sc4.nextInt();
+//                if(n < 0){
+//                    hayNegativo = true;
+//                }
 //        }
 //
-//        for(int num : nums){//recorrer array
-//            if(num < 0){
-//                hayNegativo = true;
-//                break;
-//            }
-//        }
-//
-//        if(hayNegativo){
-//            System.out.println("Hay al menos un numero negativo");
-//        }else{
-//            System.out.println("No hay numeros negativos");
-//        }
+//        System.out.println("Hay numeros negativos " + hayNegativo);
+
+
+
+
+
+
+
 //
 //        //ejercicio 11
 //        Scanner sc8 = new Scanner(System.in);
