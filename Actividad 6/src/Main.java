@@ -8,33 +8,33 @@ public class Main {
 //
 //
 //        for(int i = 0; i < 5;i++){
-//        for(int j = 0;j < 5;j++){
-//            matriz[i][j] =  (i * 5) + j + 1;
-//        }
+//          for(int j = 0;j < 5;j++){
+//            matriz[i][j] =  (i * 5) + j + 1; //multiplicar fila * 5 + la columna + 1
+//          }
 //        }
 //
 //        for(int i = 0; i < 5;i++){
 //            for(int j = 0;j < 5;j++){
 //                System.out.print(matriz[i][j] + " ");
-//                if((matriz[i][j] % 5)==0){
+//                  if((matriz[i][j] % 5)==0){
 //                    System.out.println();
-//                }
+//                  }
 //            }
 //        }
 
-        //ejercicio 2 (CORREGIR)
+        //ejercicio 2 
 //        int[][] matriz2 = new int[10][10];
 //
-//        for(int i = 0;i < matriz2.length;i++){
-//            for(int j = 0;i < matriz2[i].length;j++){
-//                matriz2[i][j] = (i * 10) + j + 1;
+//        for(int i = 1;i <= matriz2.length;i++){//empezando en i =1; <= length
+//            for(int j = 1; j <= matriz2[i].length;j++){//empezando en i =1; <= length
+//                matriz2[i][j] = i * j; //multiplicar fila * columna --> 1*1, 1*2..*3...*4
 //            }
 //        }
-//        for(int i = 0;i < matriz2.length;i++){
-//            for(int j = 1;i < matriz2[i].length;j++){
-//                System.out.print(matriz2[i][j]);
-//
+//        for(int i = 1;i <= matriz2.length;i++){//empezando en i =1; <= length
+//            for(int j = 1;j <= matriz2[i].length;j++){//empezando en i =1; <= length
+//                System.out.print(matriz2[i][j + " "]);//imprimir 1-10
 //            }
+//                System.out.println();
 //        }
 
         //ejercicio 3
@@ -47,6 +47,7 @@ public class Main {
 //
 //        System.out.println("Filas N ");
 //        int N = sc.nextInt();
+        
 //        System.out.println("Columnas M ");
 //        int M = sc.nextInt();
 //
@@ -62,7 +63,8 @@ public class Main {
 //
 //        for(int i = 0;i < matriz3.length;i++){
 //            for(int j = 0;j < matriz3[i].length;j++){
-//                if(matriz3[i][j] < 0){
+        
+//                if(matriz3[i][j] < 0){ //mayor, menor o igual a 0 + contadores
 //                    menores++;
 //                }
 //                if(matriz3[i][j] > 0){
@@ -86,8 +88,9 @@ public class Main {
 //        for(int i = 0; i < array.length; i++){
 //            System.out.println("Ponga notas alumno " + (i + 1));
 //            for(int j = 0; j < array[i].length; j++){
-//                System.out.println("Posicion [" + i + "][" + j + "]");
-//                System.out.print("Nota " + (j + 1) + ": ");
+//                System.out.println("Posicion [" + i + "][" + j + "]"); //posicion matriz
+        
+//                System.out.print("Nota " + (j + 1) + ": "); //dar nota cambio columna
 //                array[i][j] = sc1.nextInt();
 //            }
 //        }
@@ -110,25 +113,23 @@ public class Main {
         System.out.println(" N Personas: ");
         int N = sc.nextInt();
 
-        double[][] array2 = new double[N][2];
+        double[][] array2 = new double[N][2]; //lineas N, columnas fijas
 
         for (int i = 0; i < array2.length; i++) {
             System.out.println("Persona " + (i + 1));
 
-            System.out.println("Género (0 para varón, 1 para mujer): ");
+            System.out.println("Género (0 para varón, 1 para mujer): ");//pedir genero y almacenarlo columna 0 cualquier linea
             array2[i][0] = sc.nextInt();
-
-            System.out.println("Sueldo: ");
+            
+            System.out.println("Sueldo: "); //pedir sueldo y almacenarlo columna 1 cualquier linea
             array2[i][1] = sc.nextDouble();
+            
         }
 
         System.out.println("\n--- Datos Registrados ---");
             for (int i = 0; i < array2.length; i++) {
-                System.out.println(
-                        "Persona " + (i + 1) +
-                                ": Género = " + personas[i][0] +
-                                ", Sueldo = " + personas[i][1]
-                );
+                System.out.println("Persona " + (i + 1)); //persona
+                System.out.print("Genero " + array2[i][0] + " " + "Sueldo " + array2[i][1] + "\n");
             }
 
     }
