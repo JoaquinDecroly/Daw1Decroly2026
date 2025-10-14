@@ -33,7 +33,7 @@ public class Main {
 //        ejercicio 4
 //        for(int j = 0; j <= 200; j += 2){
 //            //bucle para sumar de 2 en 2, hasta 200
-//        System.out.println("Los valores pares de j, sumando de 2 en 2, son: " + j);
+//              System.out.println("Los valores pares de j, sumando de 2 en 2, son: " + j);
 //        }
 //
 //        //ejercicio 5
@@ -173,27 +173,27 @@ public class Main {
 //
 //        //ejercicio 10
 //        Scanner sc7 = new Scanner(System.in);
-///        int[] nums = new int[10];
-///
-///       boolean hayNegativo = false;
-///
-///        for(int i = 0; i < nums.length; i++){ //bucle leer numero con longitud array nums(10)
-///            System.out.println("Inserte 10 numeros: ");
-///                nums[i] = sc4.nextInt();
-///        }
+//        int[] nums = new int[10];
 //
-///        for(int num : nums){//recorrer array
-///            if(num < 0){
-///                hayNegativo = true;
-///                break;
-///            }
-///        }
+//       boolean hayNegativo = false;
 //
-///        if(hayNegativo){
-///            System.out.println("Hay al menos un numero negativo");
-///        }else{
-///            System.out.println("No hay numeros negativos");
-///        }
+//        for(int i = 0; i < nums.length; i++){ //bucle leer numero con longitud array nums(10)
+//            System.out.println("Inserte 10 numeros: ");
+//               nums[i] = sc4.nextInt();
+//        }
+//
+//        for(int num : nums){//recorrer array
+//            if(num < 0){
+//                hayNegativo = true;
+//                break;
+//            }
+//        }
+//
+//        if(hayNegativo){
+//            System.out.println("Hay al menos un numero negativo");
+//        }else{
+//            System.out.println("No hay numeros negativos");
+//        }
 //        boolean hayNegativo = false;
 //
 //        for(int i = 0; i < 10; i++){ //bucle leer numero con longitud array nums(10)

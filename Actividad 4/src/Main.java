@@ -18,7 +18,7 @@ public class Main {
 //
 //
 //        System.out.println("\n Los numeros insertados son: \n");
-//        for(int num : nums1){
+//        for(int num : nums1){ //for-each == for pero con dos variables
 //            System.out.println(num);
 //        }
 
@@ -36,7 +36,7 @@ public class Main {
 //            System.out.println("Numero " + i + "/9");
 //            nums2[i] = sc2.nextInt();
 //            
-//            suma += nums2[i];
+//            suma += nums2[i]; //sumar resultados pedidos
 //        }
 //        System.out.println(i);
 
@@ -52,12 +52,12 @@ public class Main {
 //            System.out.println("Numero " + i + "/9");
 //            nums1[i] = sc3.nextInt();
 //        }
-//        double max = Arrays.stream(nums1).max().getAsDouble();
-////            double max = Arrays.stream(nums1).max().orElse(0.0);
-//        double min = Arrays.stream(nums1).min().getAsDouble();
-////            double min = Arrays.stream(nums1).min().orElse(0.0);
+//        double max = Arrays.stream(nums1).max().getAsDouble(); // sacar maximo
+///            double max = Arrays.stream(nums1).max().orElse(0.0);//mejor opcion
+//        double min = Arrays.stream(nums1).min().getAsDouble(); //sacar minimo
+///            double min = Arrays.stream(nums1).min().orElse(0.0); //mmejor opcion
 //        
-//        System.out.println("Maximo: " + max + "\n Minimo: " + min);
+//        System.out.print("Maximo: " + max + "\n Minimo: " + min);
 
 //        //ejercicio 4
 //        Scanner sc4 = new Scanner(System.in);
@@ -74,13 +74,13 @@ public class Main {
 //            System.out.println("Numero " + i + "/19");
 //            nums3[i] = sc4.nextInt();
 //            
-//            if(nums3[i] > -1){
+//            if(nums3[i] > -1){ //contadores para sumar
 //                sumaP += nums3[i];
 //            }else{
 //                sumaN += nums3[i];
 //            }
 //        }
-//        System.out.println("Suma Numeros \n Positivos " + sumaP + " Negativos " + sumaN);
+//        System.out.prin("Suma Numeros \n Positivos " + sumaP + "  Negativos " + sumaN);
 
 //        //ejercicio 5
 //        Scanner sc5 = new Scanner(System.in);
@@ -96,8 +96,8 @@ public class Main {
 //            System.out.println("Numero " + i + "/19");
 //            nums2[i] = sc5.nextInt();
 //
-//            suma += nums2[i];
-//            double media = suma / nums2.length;
+//            suma += nums2[i]; //sumar numeros insertados
+//            double media = suma / nums2.length; //hacer media suma / longitud array
 //        }
 //      
 //        System.out.println("Media: " + media);
@@ -107,23 +107,26 @@ public class Main {
 //        
 //        System.out.println("Ingrese valor N (tamano array) ");
 //        int N = sc6.nextInt();
-//            int[] array = new int[N];
+//            int[] array = new int[N]; //array tamano N
+        
 //        System.out.println("Ingrese valor M ");
-//        int M = sc6.nextInt();
-//            Arrays.fill(array, M);
+//          int M = sc6.nextInt();
+//            Arrays.fill(array, M); //llenar todo el array con valor M
 //            
 //            for(int num : array){
-//                System.out.println("\n" + num);
+//                System.out.print("\n" + num);
 //            }         
 
 //        //ejercicio 7
 //        Scanner sc7 = new Scanner(System.in);
 //        System.out.println("P ");
 //        int P = sc7.nextInt();
+        
 //        System.out.println("Q ");
 //        int Q = sc7.nextInt();
 //        
-//        int[] array1 = new int[]{P,Q};
+//        int[] array1 = new int[]{P,Q}; //array con valores predefinidos {...,...}
+        
 //        for(int num1 : array1){
 //                System.out.println("\n" + num1);
 //            }    
@@ -136,7 +139,7 @@ public class Main {
 //        double R = sc8.nextDouble();
 //
 //        for(int i = 0;i < array2.length;i++){
-//            array2[i] = Math.random();
+//            array2[i] = Math.random(); //math.random() = generador aleatorio nums 0-1
 //
 //            if(array2[i] >= R){
 //                System.out.println(array2[i] + " es superior a " + R);
@@ -150,7 +153,7 @@ public class Main {
 //        System.out.println("Introduce N ");
 //        int N = sc9.nextInt();
 //        for(int i = 0;i < array3.length;i++){
-//            array3[i] = (int)(1 + Math.random() * 10);
+//            array3[i] = (int)(1 + Math.random() * 10); //generar nums + 1 (empieza por 1) * 10 --> 1-10
 //            
 //            if(array3[i] == N){
 //                System.out.println(i);
@@ -175,6 +178,7 @@ public class Main {
 //        for (int i = 0; i < altura.length; i++) {
 //            altura[i] += suma;
 //            media = suma / altura.length;
+        
 //            max = Arrays.stream(altura).max().orElse(0.0);
 //            min = Arrays.stream(altura).min().orElse(0.0);
 //
@@ -195,15 +199,16 @@ public class Main {
 //        int[] array6 = new int[100];
 //
 //        for(int i = 0;i < array5.length;i++){
-//            array5[i] = i + 1;
+//            array5[i] = i + 1; //sumar 1 --> 1,2,3,4,5,...
 //        }
 //
 //        for (int i = 0; i < array5.length; i++) {
-//            array6[i] = array5[array5.length - 1 - i];
+//            array6[i] = array5[array5.length - 1 - i]; //copia inversa
 //        }
 //
 //       for(int num : array5){
 //            System.out.print(num + " ");
+        
 //            if((num % 30) == 0){
 //                System.out.println("\n");
 //            }else if(num == 100){
@@ -224,31 +229,34 @@ public class Main {
 //        
 //        String opcion;
 //        do {
-//            System.out.println("\na. Mostrar valores \nb. Introducir Valor \nc. Salir");
+//            System.out.println("\n a. Mostrar valores
+//            \n b. Introducir Valor
+//            \n c. Salir");
 //            opcion = sc12.nextLine();
 //
-//
-//
 //            switch (opcion) {
-//                case "a":
+//                case "a": //mostrar valores
 //                    for (int num : array7) {
 //                        System.out.print(num + " ");
 //                    }
 //                    break;
-//                case "b":
+        
+//                case "b": //introducir
 //                    sc12 = new Scanner(System.in);
-//                    System.out.println("Valor V ");
+        
+//                    System.out.println("Valor V "); //valor
 //                    int v = sc12.nextInt();
+        
 //                    int p;
 //                    do {
-//                        System.out.println("Posicion P (0-9)");
+//                        System.out.println("Posicion P (0-9)"); //posicion
 //                        p = sc12.nextInt();
-//                    } while (!(p >= 0 && p <= 9));
+//                    } while (!(p >= 0 && p <= 9)); //repite mientras no este entre 0 y 9
 //
-//                    array7[p] = v;
+//                    array7[p] = v; //pone valor v, en posicion p
 //                        sc12.nextLine();
-//
 //                    break;
+        
 //                case "c":
 //                    break;
 //            }
@@ -268,7 +276,7 @@ public class Main {
 //        int N = sc13.nextInt();
 //
 //        int[] nums = new int[N];
-//          nums[0] = V;
+//          nums[0] = V; //empieza por valor v
 //        
 //        for(int i = 1; i < nums.length; i++){
 //            nums[i] = nums[i - 1] + I;
@@ -280,9 +288,10 @@ public class Main {
 
 
 //        //ejercicio 14 
-//        for (int i = 1; i <= 10; i++) {
+//        for (int i = 1; i <= 10; i++) { //bucle 1 22 333 4444 55555
 //            for (int j = 1; j <= i; j++) {
 //                System.out.print(i + " ");
+        
 //                    if((i % j)== 0){
 //                        System.out.println();
 //                    }
