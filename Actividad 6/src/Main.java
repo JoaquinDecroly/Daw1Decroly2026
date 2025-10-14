@@ -80,28 +80,56 @@ public class Main {
 //        System.out.println("Hay " + ceros + " numeros iguales a 0");
 
         //ejercicio 4
-        Scanner sc1 = new Scanner(System.in);
-        int[][] array = new int[4][5];
+//        Scanner sc1 = new Scanner(System.in);
+//        int[][] array = new int[4][5];
+//
+//        for(int i = 0; i < array.length; i++){
+//            System.out.println("Ponga notas alumno " + (i + 1));
+//            for(int j = 0; j < array[i].length; j++){
+//                System.out.println("Posicion [" + i + "][" + j + "]");
+//                System.out.print("Nota " + (j + 1) + ": ");
+//                array[i][j] = sc1.nextInt();
+//            }
+//        }
+//        for(int i = 0; i < array.length; i++){
+//
+//            int max = Arrays.stream(array[i]).max().getAsInt();//formula sacar max
+//            int min = Arrays.stream(array[i]).min().getAsInt();//formula sacar min
+//            double media = Arrays.stream(array[i]).average().getAsDouble();//formula sacar media
+//
+//            System.out.println("Alumno " + (i + 1));
+//            System.out.println("La nota maxima es: " + max);
+//            System.out.println("La nota minima es: " + min);
+//            System.out.println("La nota media es: " + media);
+//            System.out.println("---------------------------------");
+//        }
 
-        for(int i = 0; i < array.length; i++){
-            System.out.println("Ponga notas alumno " + (i + 1));
-            for(int j = 0; j < array[i].length; j++){
-                System.out.println("Posicion [" + i + "][" + j + "]");
-                System.out.print("Nota " + (j + 1) + ": ");
-                array[i][j] = sc1.nextInt();
+        //ejercicio 5
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println(" N Personas: ");
+        int N = sc.nextInt();
+
+        double[][] array2 = new double[N][2];
+
+        for (int i = 0; i < array2.length; i++) {
+            System.out.println("Persona " + (i + 1));
+
+            System.out.println("Género (0 para varón, 1 para mujer): ");
+            array2[i][0] = sc.nextInt();
+
+            System.out.println("Sueldo: ");
+            array2[i][1] = sc.nextDouble();
+        }
+
+        System.out.println("\n--- Datos Registrados ---");
+            for (int i = 0; i < array2.length; i++) {
+                System.out.println(
+                        "Persona " + (i + 1) +
+                                ": Género = " + personas[i][0] +
+                                ", Sueldo = " + personas[i][1]
+                );
             }
-        }
-        for(int i = 0; i < array.length; i++){
-            
-            int max = Arrays.stream(array[i]).max().getAsInt();//formula sacar max
-            int min = Arrays.stream(array[i]).min().getAsInt();//formula sacar min
-            double media = Arrays.stream(array[i]).average().getAsDouble();//formula sacar media
-            
-            System.out.println("Alumno " + (i + 1));
-            System.out.println("La nota maxima es: " + max);
-            System.out.println("La nota minima es: " + min);
-            System.out.println("La nota media es: " + media);
-            System.out.println("---------------------------------");
-        }
+
     }
 }
