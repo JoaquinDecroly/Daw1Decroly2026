@@ -113,9 +113,8 @@ public class Main {
 //                factorial *= i;
 //              }
 //              System.out.println("El factorial de " + n + " es:");
-//
-//
-//
+
+
 //        //ejercicio 9
 //        Scanner sc6 = new Scanner(System.in);
 //
@@ -170,7 +169,8 @@ public class Main {
 //        }
 //
 //        System.out.printf("%02d:%02d:%02d", hora, min, seg); // mostrar hora formateada con 2 digitos(%02d) + ":"
-//
+
+
 //        //ejercicio 10
 //        Scanner sc7 = new Scanner(System.in);
 //        int[] nums = new int[10];
@@ -207,11 +207,6 @@ public class Main {
 //        System.out.println("Hay numeros negativos " + hayNegativo);
 
 
-
-
-
-
-
 //
 //        //ejercicio 11
 //        Scanner sc8 = new Scanner(System.in);
@@ -234,7 +229,8 @@ public class Main {
 //        }
 //        System.out.println("Hay un total de " + contP + " numeros positivos");
 //        System.out.println("Hay un total de " + contN + " numeros negativos");
-//
+
+
 //        ejercicio 12
 //        Scanner sc9 = new Scanner(System.in);
 //        int[] nums2 = new int[50];
@@ -295,7 +291,7 @@ public class Main {
 //        System.out.println("El producto de los 10 primerosnumeros naturales es: " + producto);
 //        System.out.println("La suma de los 10  primeros numeros naturales es: " + suma);
 //
-//
+
 //        //ejercicio 14
 //        //CalcularSalario (nombre, salario bruto y neto + tasas)
 //
@@ -351,25 +347,19 @@ public class Main {
 //        if(salarioBruto <= 500){
 //            impuestos = 0;
 //            salarioNeto = salarioBruto;
-//            System.out.println("El salario bruto es: " + salarioBruto);
-//            System.out.println("El salario neto es: " + salarioNeto);
-//            System.out.println("Los impuestos son: " + impuestos);
+
+
 //        } else if (salarioBruto > 500 && salarioBruto <= 900) {
-//            impuestos = salarioBruto * 0.75;
+//            salarioNeto = 500 +(salarioBruto - 500) * 0.75;
 //            salarioBruto = salarioNeto;
 //
-//            System.out.println("El salario bruto es: " + salarioBruto);
-//            System.out.println("El salario neto es: " + salarioNeto);
-//            System.out.println("Los impuestos son: " + impuestos);
 //        }else{
-//            impuestos = salarioBruto * 0.55;
-//            salarioNeto = salarioBruto - impuestos;
-//
+//             salarioNeto = 500 +(salarioBruto - 500) * 0.75;
+//        }
+
 //            System.out.println("El salario bruto es: " + salarioBruto);
 //            System.out.println("El salario neto es: " + salarioNeto);
-//            System.out.println("Los impuestos son: " + impuestos);
-//
-//        }
+//            System.out.println("Los impuestos son: " + (salarioBruto - salarioNeto));
 
 
     } //main
