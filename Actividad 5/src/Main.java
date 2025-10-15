@@ -58,7 +58,7 @@ public class Main {
 //        String str1= str.toLowerCase().trim();
 //
 //        for(int i = 0; i < str.length(); i++){
-//            char c = texto.charAt(i);
+//            char c = str1.charAt(i);
 //                switch (c) {
 //                    case 'a':
 //                        A++;
@@ -85,6 +85,11 @@ public class Main {
 //        System.out.println("Contador I: " + I);
 //        System.out.println("Contador O: " + O);
 //        System.out.println("Contador U: " + U);
+
+        // ejercicio 5
+        
+
+
 
 
     }
