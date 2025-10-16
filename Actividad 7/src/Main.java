@@ -114,24 +114,22 @@ public class Main {
                 switch (numeroAleatorio) {
                     case 1:
                         System.out.println("La máquina eligió piedra\n");
+                        contadorPiedraAI++;
                         break;
 
                     case 2:
                         System.out.println("La máquina eligió papel\n");
+                        contadorPapelAI++;
                         break;
 
                     case 3:
                         System.out.println("La máquina eligió tijera\n");
+                        contadorTijerasAI++;
                         break;
                 } 
             }
             
         }while(!(n1.equals("0") || n2.equals("0") || n3.equals("0") || opcion.equals("4")));
-
-
-
-
-
-
+        
     }
 }
