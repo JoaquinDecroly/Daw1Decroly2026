@@ -26,6 +26,7 @@ public class Main {
             System.out.println("1 . Piedra");
             System.out.println("2. Papel");
             System.out.println("3. Tijera");
+            System.out.println("4. Salir");
             opcion = sc.nextLine();
 
         }while(!(opcion.equals("1") || opcion.equals("2") || opcion.equals("3")));
@@ -81,6 +82,9 @@ public class Main {
                         break;
                     }
                 break;
+
+                case "4":
+                    System.out.println("");
             }
         }// if !opcion.equals("")
 
@@ -89,15 +93,15 @@ public class Main {
         if(n1.equals("1") || n2.equals("1") || n3.equals("1"))
             switch(numeroAleatorio){
                 case 1:
-                    System.out.println("La máquina eligió piedra");
+                    System.out.println("La máquina eligió piedra\n");
                 break;
 
                 case 2:
-                System.out.println("La máquina eligió papel");
+                System.out.println("La máquina eligió papel\n");
                 break;
 
                 case 3:
-                System.out.println("La máquina eligió tijera");
+                System.out.println("La máquina eligió tijera\n");
                 break;
         }
 
