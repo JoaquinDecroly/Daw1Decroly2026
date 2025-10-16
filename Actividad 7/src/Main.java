@@ -1,0 +1,112 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("-----------------REGLAS------------------------");
+        System.out.println("Elegir un numero (piedra|papel|tijera) ");
+        System.out.println("La máquina elige un numero aleatorio ");
+        System.out.println("Esperar resultado ");
+        System.out.println("----------------------------------------------\n");
+
+
+        int numeroAleatorio = (int)(1 + Math.random() * 3);
+
+        String opcion;
+
+        String n1 = "";
+        String n2 = "";
+        String n3 = "";
+
+    do{
+        do{
+            System.out.println("\n------Elige tu arma------");
+            System.out.println("1 . Piedra");
+            System.out.println("2. Papel");
+            System.out.println("3. Tijera");
+            opcion = sc.nextLine();
+
+        }while(!(opcion.equals("1") || opcion.equals("2") || opcion.equals("3")));
+
+        if(!opcion.equals(null)){
+
+            //opcion escogida por ti
+            switch(opcion){
+                case "1":
+                    System.out.print("Elegiste piedra\n");
+                    System.out.println("-------------------------");
+                    System.out.println("elige 1 para confirmar, 0 para volver");
+                    n1 = sc.nextLine();
+
+                    if(n1.equals("1")){
+                        System.out.print("Elegiste piedra\n");
+                        break;
+
+                    }else if(n1.equals("0")){
+                        opcion = "";
+                        break;
+                    }
+                break;
+
+                case "2":
+                    System.out.print("Elegiste papel\n");
+                    System.out.println("-------------------------");
+                    System.out.println("elige 1 para confirmar, 0 para volver");
+                    n2 = sc.nextLine();
+
+                    if(n2.equals("1")){
+                        System.out.print("Elegiste papel\n");
+                        break;
+
+                    }else if(n2.equals("0")){
+                        opcion = "";
+                        break;
+                    }
+                break;
+
+                case "3":
+                    System.out.print("Elegiste tijera\n");
+                    System.out.println("-------------------------");
+                    System.out.println("elige 1 para confirmar, 0 para volver");
+                    n3 = sc.nextLine();
+
+                    if(n3.equals("1")){
+                        System.out.print("Elegiste tijera\n");
+                        break;
+
+                    }else if(n3.equals("0")){
+                        opcion = "";
+                        break;
+                    }
+                break;
+            }
+        }// if !opcion.equals("")
+
+
+        //numero aleatorio maquina
+        if(n1.equals("1") || n2.equals("1") || n3.equals("1"))
+            switch(numeroAleatorio){
+                case 1:
+                    System.out.println("La máquina eligió piedra");
+                break;
+
+                case 2:
+                System.out.println("La máquina eligió papel");
+                break;
+
+                case 3:
+                System.out.println("La máquina eligió tijera");
+                break;
+        }
+
+    }while(!(n1.equals("2") || n2.equals("2") || n3.equals("3")));
+
+
+
+
+
+
+    }
+}
