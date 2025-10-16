@@ -87,7 +87,31 @@ public class Main {
 //        System.out.println("Contador U: " + U);
 
         // ejercicio 5
-        
+        Scanner sc5 = new Scanner(System.in);
+
+        boolean esPalindromo = false;
+
+        System.out.println("Introduzca una frase palindromo");
+        String texto = sc5.nextLine();
+
+        String palindromo = texto.toLowerCase().trim(); //cambiar a minusculas y quitar espacios
+
+        for(int i = 0; i < (palindromo.length()/2); i++){  //for con longitud texto/2
+            if(palindromo.charAt(i) != palindromo.charAt(palindromo.length() -i -1)){
+                //posicion i del texto != posicion texto (inverso)
+                break;
+            }else{
+                esPalindromo = true;
+                break;
+            }
+        }
+
+        if (esPalindromo){
+            System.out.println("La frase es un palíndromo (=orden lectura e inverso)");
+        }else{
+            System.out.println("La frase no es un palíndromo");
+        }
+
 
 
 
