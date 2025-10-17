@@ -145,7 +145,6 @@ public class Main {
             }while(!(opcion.equals("1") || opcion.equals("2") || opcion.equals("3") || opcion.equals("5")));
 
             if(!opcion.equals("0")){
-
                 //opcion escogida por ti
                 switch(opcion){
                     case "1":
@@ -210,7 +209,6 @@ public class Main {
                                             +"-Victorias " + contadorV + "\n-Derrotas " + contadorD
                                             + "\n-Empates " + contadorE);
 
-
                     break;
 
                     case "5":
@@ -218,39 +216,44 @@ public class Main {
                     break;
                 }
 
-                //numero aleatorio maquina
-                if(n1.equals("1") || n2.equals("1") || n3.equals("1")){
-                    switch(numeroAleatorio){
-                        case 1:
-                            System.out.println("La máquina eligió piedra");
-                            contadorPiedraAI++;
-                            break;
 
-                        case 2:
-                            System.out.println("La máquina eligió papel");
-                            contadorPapelAI++;
-                            break;
 
-                        case 3:
-                            System.out.println("La máquina eligió tijera");
-                            contadorTijerasAI++;
-                            break;
-                    }
+                if(!opcion.equals("5"))    {
+                    //numero aleatorio maquina
+                    if(n1.equals("1") || n2.equals("1") || n3.equals("1")){
+                        switch(numeroAleatorio){
+                            case 1:
+                                System.out.println("La máquina eligió piedra");
+                                contadorPiedraAI++;
+                                break;
 
-                    if(Integer.parseInt(opcion) == numeroAleatorio){
-                        System.out.println("--------------------------");
-                        System.out.println("Empate!");
-                        contadorE++;
+                            case 2:
+                                System.out.println("La máquina eligió papel");
+                                contadorPapelAI++;
+                                break;
 
-                    }else if(opcion.equals("1") && numeroAleatorio == 3 || opcion.equals("2") && numeroAleatorio == 1 || opcion.equals("3") && numeroAleatorio == 2){
-                        System.out.println("--------------------------");
-                        System.out.println("Ganaste!");
-                        contadorV++;
-                    }else{
-                        System.out.println("--------------------------");
-                        System.out.println("Perdiste!");
-                        contadorD++;
-                    }
+                            case 3:
+                                System.out.println("La máquina eligió tijera");
+                                contadorTijerasAI++;
+                                break;
+                        }
+
+                        if(Integer.parseInt(opcion) == numeroAleatorio){
+                            System.out.println("--------------------------");
+                            System.out.println("Empate!");
+                            contadorE++;
+
+                        }else if(opcion.equals("1") && numeroAleatorio == 3 || opcion.equals("2") && numeroAleatorio == 1 || opcion.equals("3") && numeroAleatorio == 2){
+                            System.out.println("--------------------------");
+                            System.out.println("Ganaste!");
+                            contadorV++;
+                        }else{
+                            System.out.println("--------------------------");
+                            System.out.println("Perdiste!");
+                            contadorD++;
+                        }
+                }
+
                 }
             }// if !opcion.equals("")
 
