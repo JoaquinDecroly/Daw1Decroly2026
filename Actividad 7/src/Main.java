@@ -27,7 +27,7 @@ public class Main {
         int contadorE = 0;
         
 
-        String opcion;
+        String opcion = "0";
 
         String n1 = "";
         String n2 = "";
@@ -144,7 +144,7 @@ public class Main {
 
             }while(!(opcion.equals("1") || opcion.equals("2") || opcion.equals("3") || opcion.equals("5")));
 
-            if(!opcion.equals("")){
+            if(!opcion.equals("0")){
 
                 //opcion escogida por ti
                 switch(opcion){
@@ -160,7 +160,7 @@ public class Main {
                             break;
 
                         }else if(n1.equals("0")){
-                            opcion = "";
+                            opcion = "0";
                             break;
                         }
                     break;
@@ -177,7 +177,7 @@ public class Main {
                             break;
 
                         }else if(n2.equals("0")){
-                            opcion = "";
+                            opcion = "0";
                             break;
                         }
                     break;
@@ -194,7 +194,7 @@ public class Main {
                             break;
 
                         }else if(n3.equals("0")){
-                            opcion = "";
+                            opcion = "0";
                             break;
                         }
                     break;
@@ -202,13 +202,17 @@ public class Main {
                     case "4":
                         System.out.println("---------ESTADISTICAS-----------");
                         System.out.println();
+                    break;
 
+                    case "5":
+                        System.out.println("Saliendo...");
+                    break;
                 }
             }// if !opcion.equals("")
 
 
             //numero aleatorio maquina
-            if(n1.equals("1") || n2.equals("1") || n3.equals("1"))
+            if(n1.equals("1") || n2.equals("1") || n3.equals("1")){
                 switch(numeroAleatorio){
                     case 1:
                         System.out.println("La máquina eligió piedra");
@@ -226,20 +230,22 @@ public class Main {
                         break;
                 }
 
-            if(Integer.parseInt(opcion) == numeroAleatorio){
-                System.out.println("--------------------------");
-                System.out.println("Empate!");
-                contadorE++;
+                if(Integer.parseInt(opcion) == numeroAleatorio){
+                    System.out.println("--------------------------");
+                    System.out.println("Empate!");
+                    contadorE++;
 
-            }else if(opcion.equals("1") && numeroAleatorio == 3 || opcion.equals("2") && numeroAleatorio == 1 || opcion.equals("3") && numeroAleatorio == 2){
-                System.out.println("--------------------------");
-                System.out.println("Ganaste!");
-                contadorV++;
-            }else{
-                System.out.println("--------------------------");
-                System.out.println("Perdiste!");
-                contadorD++;
+                }else if(opcion.equals("1") && numeroAleatorio == 3 || opcion.equals("2") && numeroAleatorio == 1 || opcion.equals("3") && numeroAleatorio == 2){
+                    System.out.println("--------------------------");
+                    System.out.println("Ganaste!");
+                    contadorV++;
+                }else{
+                    System.out.println("--------------------------");
+                    System.out.println("Perdiste!");
+                    contadorD++;
+                }
             }
+
 
         }while(!(n1.equals("2") || n2.equals("2") || n3.equals("3") || opcion.equals("5")));
         
