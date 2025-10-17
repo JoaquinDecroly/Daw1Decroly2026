@@ -201,50 +201,61 @@ public class Main {
 
                     case "4":
                         System.out.println("---------ESTADISTICAS-----------");
-                        System.out.println();
+                        System.out.println("-PapelJugador " + contadorPapelJ + "\n-PiedraJugador " + contadorPiedraJ
+                                            + "\n-TijeraJugador " + contadorTijerasJ
+                                                        + "\n------------------\n"
+                                            + "-PapelAI" + contadorPapelAI + "\n-PiedraAI " + contadorPiedraAI
+                                            + "\n-TijeraAI " + contadorTijerasAI
+                                                        + "\n------------------\n"
+                                            +"-Victorias " + contadorV + "\n-Derrotas " + contadorD
+                                            + "\n-Empates " + contadorE);
+
+
                     break;
 
                     case "5":
                         System.out.println("Saliendo...");
                     break;
                 }
+
+                //numero aleatorio maquina
+                if(n1.equals("1") || n2.equals("1") || n3.equals("1")){
+                    switch(numeroAleatorio){
+                        case 1:
+                            System.out.println("La máquina eligió piedra");
+                            contadorPiedraAI++;
+                            break;
+
+                        case 2:
+                            System.out.println("La máquina eligió papel");
+                            contadorPapelAI++;
+                            break;
+
+                        case 3:
+                            System.out.println("La máquina eligió tijera");
+                            contadorTijerasAI++;
+                            break;
+                    }
+
+                    if(Integer.parseInt(opcion) == numeroAleatorio){
+                        System.out.println("--------------------------");
+                        System.out.println("Empate!");
+                        contadorE++;
+
+                    }else if(opcion.equals("1") && numeroAleatorio == 3 || opcion.equals("2") && numeroAleatorio == 1 || opcion.equals("3") && numeroAleatorio == 2){
+                        System.out.println("--------------------------");
+                        System.out.println("Ganaste!");
+                        contadorV++;
+                    }else{
+                        System.out.println("--------------------------");
+                        System.out.println("Perdiste!");
+                        contadorD++;
+                    }
+                }
             }// if !opcion.equals("")
 
 
-            //numero aleatorio maquina
-            if(n1.equals("1") || n2.equals("1") || n3.equals("1")){
-                switch(numeroAleatorio){
-                    case 1:
-                        System.out.println("La máquina eligió piedra");
-                        contadorPiedraAI++;
-                        break;
 
-                    case 2:
-                        System.out.println("La máquina eligió papel");
-                        contadorPapelAI++;
-                        break;
-
-                    case 3:
-                        System.out.println("La máquina eligió tijera");
-                        contadorTijerasAI++;
-                        break;
-                }
-
-                if(Integer.parseInt(opcion) == numeroAleatorio){
-                    System.out.println("--------------------------");
-                    System.out.println("Empate!");
-                    contadorE++;
-
-                }else if(opcion.equals("1") && numeroAleatorio == 3 || opcion.equals("2") && numeroAleatorio == 1 || opcion.equals("3") && numeroAleatorio == 2){
-                    System.out.println("--------------------------");
-                    System.out.println("Ganaste!");
-                    contadorV++;
-                }else{
-                    System.out.println("--------------------------");
-                    System.out.println("Perdiste!");
-                    contadorD++;
-                }
-            }
 
 
         }while(!(n1.equals("2") || n2.equals("2") || n3.equals("3") || opcion.equals("5")));
