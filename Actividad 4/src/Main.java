@@ -287,15 +287,15 @@ public class Main {
 //        }
 
 
-//        //ejercicio 14 
-//        for (int i = 1; i <= 10; i++) { //bucle 1 22 333 4444 55555
-//            for (int j = 1; j <= i; j++) {
-//                System.out.print(i + " ");
+//        //ejercicio 14
+        int[] array = new int[55];
+        for (int i = 1; i <= 10; i++) { //bucle 1 22 333 4444 55555
+            for (int j = 1; j <= i; j++) {
+                array[i] = i;
+                System.out.print(array[i] + " ");
         
-//                    if((i % j)== 0){
-//                        System.out.println();
-//                    }
-//            }
-//        }
+
+            }
+        }
     }
 }
