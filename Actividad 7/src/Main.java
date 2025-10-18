@@ -103,7 +103,7 @@ public class Main {
                         System.out.println("-PapelJugador " + contadorPapelJ + "\n-PiedraJugador " + contadorPiedraJ
                                 + "\n-TijeraJugador " + contadorTijerasJ
                                 + "\n------------------\n"
-                                + "-PapelAI" + contadorPapelAI + "\n-PiedraAI " + contadorPiedraAI
+                                + "-PapelAI " + contadorPapelAI + "\n-PiedraAI " + contadorPiedraAI
                                 + "\n-TijeraAI " + contadorTijerasAI
                                 + "\n------------------\n"
                                 + "-Victorias " + contadorV + "\n-Derrotas " + contadorD
@@ -117,7 +117,7 @@ public class Main {
                 }
 
 
-                if (!opcion.equals("5") || opcion.equals("0")) { //no entrar salida ni opcion = 0
+                if (!(opcion.equals("5") || opcion.equals("0"))) { //no entrar salida ni opcion = 0
                     //numero aleatorio maquina
                     if (n1.equals("1") || n2.equals("1") || n3.equals("1")) { // opciones 1 para confirmar
                         int numeroAleatorio = (int) (1 + Math.random() * 3);
