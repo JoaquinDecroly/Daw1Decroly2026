@@ -53,9 +53,9 @@ public class Main {
 //            nums1[i] = sc3.nextInt();
 //        }
 //        double max = Arrays.stream(nums1).max().getAsDouble(); // sacar maximo
-///            double max = Arrays.stream(nums1).max().orElse(0.0);//mejor opcion
+///            double max = Arrays.stream(nums1).max().orElse(0.0);//mejor opcion maximo
 //        double min = Arrays.stream(nums1).min().getAsDouble(); //sacar minimo
-///            double min = Arrays.stream(nums1).min().orElse(0.0); //mmejor opcion
+///            double min = Arrays.stream(nums1).min().orElse(0.0); //mmejor opcion minimo
 //        
 //        System.out.print("Maximo: " + max + "\n Minimo: " + min);
 
@@ -80,7 +80,7 @@ public class Main {
 //                sumaN += nums3[i];
 //            }
 //        }
-//        System.out.prin("Suma Numeros \n Positivos " + sumaP + "  Negativos " + sumaN);
+//        System.out.prin("Suma Numeros \n\t Positivos " + sumaP + "\n\t Negativos " + sumaN);
 
 //        //ejercicio 5
 //        Scanner sc5 = new Scanner(System.in);
