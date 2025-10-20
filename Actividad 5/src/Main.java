@@ -8,7 +8,7 @@ public class Main {
 //        System.out.println("Texto: ");
 //        String str = sc.nextLine();
 //
-//        String[] palabras = str.split(" ");
+//        String[] palabras = str.split(" "); //separar palabra por espacios
 //        for(String palabra:palabras){
 //            System.out.println(palabra);
 //
@@ -23,7 +23,7 @@ public class Main {
 //        System.out.println("Texto 2: ");
 //        String str1 = sc1.nextLine();
 //
-//        System.out.println(str1.equalsIgnoreCase(str));
+//        System.out.println(str1.equalsIgnoreCase(str)); //comparar dos textos
 //
         //ejercicio 3
 //        Scanner sc2 = new Scanner(System.in);
@@ -36,7 +36,8 @@ public class Main {
 //
 //        System.out.println("Apellido 2: ");
 //        String surname2 = sc2.nextLine();
-//
+
+            //subcadena de (0[inicio], 3[final]) + mayusculas
 //        String nameF = name.substring(0,3).toUpperCase();
 //        String surnameF1 = surname1.substring(0,3).toUpperCase();
 //        String surnameF2 = surname2.substring(0,3).toUpperCase();
@@ -55,7 +56,7 @@ public class Main {
 //        System.out.println("Texto: ");
 //        String str = sc3.nextLine();
 //
-//        String str1= str.toLowerCase().trim();
+//        String str1= str.toLowerCase().trim(); //quitar espacios + minusculas
 //
 //        for(int i = 0; i < str.length(); i++){
 //            char c = str1.charAt(i);
@@ -96,7 +97,8 @@ public class Main {
 
         String palindromo = texto.toLowerCase().trim(); //cambiar a minusculas y quitar espacios
 
-        for(int i = 0; i < (palindromo.length()/2); i++){  //for con longitud texto/2
+        for(int i = 0; i < (palindromo.length()/2); i++){  //for con longitud texto/2, ya que si es palindrromo la 1era
+                                                            // mitad es igual a la 2
             if(palindromo.charAt(i) != palindromo.charAt(palindromo.length() -i -1)){
                 //posicion i del texto != posicion texto (inverso)
                 break;
@@ -111,10 +113,6 @@ public class Main {
         }else{
             System.out.println("La frase no es un palíndromo");
         }
-
-
-
-
 
     }
 }
