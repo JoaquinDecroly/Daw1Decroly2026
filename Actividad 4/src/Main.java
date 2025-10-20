@@ -52,11 +52,12 @@ public class Main {
 //            System.out.println("Numero " + i + "/9");
 //            nums1[i] = sc3.nextInt();
 //        }
-//        double max = Arrays.stream(nums1).max().getAsDouble(); // sacar maximo
-///            double max = Arrays.stream(nums1).max().orElse(0.0);//mejor opcion maximo
-//        double min = Arrays.stream(nums1).min().getAsDouble(); //sacar minimo
-///            double min = Arrays.stream(nums1).min().orElse(0.0); //mmejor opcion minimo
-//        
+//
+//        double max = Double.MIN_VALUE, min = Double.MAX_VALUE;
+//
+//        Math.max(nums1[i], max);
+//        Math.min(nums1[i], min);
+//
 //        System.out.print("Maximo: " + max + "\n Minimo: " + min);
 
 //        //ejercicio 4
@@ -115,21 +116,24 @@ public class Main {
 //            
 //            for(int num : array){
 //                System.out.print("\n" + num);
-//            }         
+//            }
 
 //        //ejercicio 7
 //        Scanner sc7 = new Scanner(System.in);
 //        System.out.println("P ");
 //        int P = sc7.nextInt();
-        
+//
 //        System.out.println("Q ");
 //        int Q = sc7.nextInt();
-//        
-//        int[] array1 = new int[]{P,Q}; //array con valores predefinidos {...,...}
-        
-//        for(int num1 : array1){
-//                System.out.println("\n" + num1);
-//            }    
+//
+//        int dimesion = (Q-P) -1;
+//
+//        int[] array1 = new int[dimesion]; //array con valores predefinidos {...,...}
+//
+//        for(int i = 0; i < array1.length; i++){
+//            array1[i] = P + (i + 1);
+//        }
+//        System.out.println(Arrays.toString(array1));
 
 //        //ejercicio 8
 //        Scanner sc8 = new Scanner(System.in);
@@ -161,37 +165,48 @@ public class Main {
 //        }
 
 //        //ejercicio 10
-//        Scanner sc10 = new Scanner(System.in);
-//
-//
-//        System.out.println("Introduzca N ");
-//        double N = sc10.nextDouble();
-//
-//        double suma = 0;
-//
-//        double[] altura = new double[(int)N];
-//
-//        double media = 0;
-//        double max = 0;
-//        double min = 0;
-//
-//        for (int i = 0; i < altura.length; i++) {
-//            altura[i] += suma;
-//            media = suma / altura.length;
-        
-//            max = Arrays.stream(altura).max().orElse(0.0);
-//            min = Arrays.stream(altura).min().orElse(0.0);
-//
-//            if(altura[i] >= media){
-//                System.out.println("Mayor o igual a la media " + altura[i]);
-//            }else{
-//                System.out.println("Menor o igual a la media " + altura[i]);
-//            }
-//        }
-//
-//        System.out.println("Media " + media);
-//        System.out.println("Maximo " + max);
-//        System.out.println("Minimo " + min);
+        Scanner sc10 = new Scanner(System.in);
+
+
+        System.out.println("Introduzca N ");
+        double N = sc10.nextDouble();
+
+
+
+        double suma = 0;
+
+        double[] altura = new double[(int)N];
+
+        for(int i = 0; i < altura.length;i++){
+            System.out.println("Inserte las alturas: ");
+            altura[i] = sc10.nextDouble();
+        }
+
+
+        double media = 0;
+        double max = 0;
+        double min = 0;
+
+        for (int i = 0; i < altura.length; i++) {
+            altura[i] += suma;
+            media = suma / altura.length;
+
+         max = Double.MIN_VALUE;
+         min = Double.MAX_VALUE;
+
+        Math.max(altura[i], max);
+        Math.min(altura[i], min);
+
+            if(altura[i] >= media){
+                System.out.println("Mayor o igual a la media " + altura[i]);
+            }else{
+                System.out.println("Menor o igual a la media " + altura[i]);
+            }
+        }
+
+        System.out.println("Media " + media);
+        System.out.println("Maximo " + max);
+        System.out.println("Minimo " + min);
 
 //        //ejercicio 11 
 //        Scanner sc11 = new Scanner(System.in);
@@ -288,14 +303,14 @@ public class Main {
 
 
 //        //ejercicio 14
-        int[] array = new int[55];
-        for (int i = 1; i <= 10; i++) { //bucle 1 22 333 4444 55555
-            for (int j = 1; j <= i; j++) {
-                array[i] = i;
-                System.out.print(array[i] + " ");
-        
-
-            }
-        }
+//        int[] array = new int[55];
+//        for (int i = 1; i <= 10; i++) { //bucle 1 22 333 4444 55555
+//            for (int j = 1; j <= i; j++) {
+//                array[i] = i;
+//                System.out.print(array[i] + " ");
+//
+//
+//            }
+//        }
     }
 }

@@ -82,30 +82,31 @@ public class Main {
 //        System.out.println("Hay " + ceros + " numeros iguales a 0");
 
         //ejercicio 4
-//        Scanner sc1 = new Scanner(System.in);
-//        int[][] array = new int[4][5];
-//
-//        for(int i = 0; i < array.length; i++){
-//            System.out.println("Ponga notas alumno " + (i + 1));
-//            for(int j = 0; j < array[i].length; j++){
-//                System.out.println("Posicion [" + i + "][" + j + "]"); //posicion matriz
-        
-//                System.out.print("Nota " + (j + 1) + ": "); //dar nota cambio columna
-//                array[i][j] = sc1.nextInt();
-//            }
-//        }
-//        for(int i = 0; i < array.length; i++){
-//
-//            int max = Arrays.stream(array[i]).max().getAsInt();//formula sacar max
-//            int min = Arrays.stream(array[i]).min().getAsInt();//formula sacar min
-//            double media = Arrays.stream(array[i]).average().getAsDouble();//formula sacar media
-//
-//            System.out.println("Alumno " + (i + 1));
-//            System.out.println("La nota maxima es: " + max);
-//            System.out.println("La nota minima es: " + min);
-//            System.out.println("La nota media es: " + media);
-//            System.out.println("---------------------------------");
-//        }
+        Scanner sc1 = new Scanner(System.in);
+        int[][] array = new int[4][5];
+
+        for(int i = 0; i < array.length; i++){
+            System.out.println("Ponga notas alumno " + (i + 1));
+           for(int j = 0; j < array[i].length; j++){
+                System.out.println("Posicion [" + i + "][" + j + "]"); //posicion matriz
+
+                System.out.print("Nota " + (j + 1) + ": "); //dar nota cambio columna
+                array[i][j] = sc1.nextInt();
+            }
+        }
+        for(int i = 0; i < array.length; i++){
+
+    double max = Double.MIN_VALUE, min = Double.MAX_VALUE;
+
+        Math.max(array[i], max);
+
+
+            System.out.println("Alumno " + (i + 1));
+            System.out.println("La nota maxima es: " + max);
+            System.out.println("La nota minima es: " + min);
+            System.out.println("La nota media es: " + media);
+            System.out.println("---------------------------------");
+        }
 
         //ejercicio 5
         Scanner sc = new Scanner(System.in);
