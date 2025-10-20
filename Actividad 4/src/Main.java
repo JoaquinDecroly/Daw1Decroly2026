@@ -178,7 +178,7 @@ public class Main {
         double[] altura = new double[(int)N];
 
         for(int i = 0; i < altura.length;i++){
-            System.out.println("Inserte las alturas: ");
+            System.out.println("Inserte la altura " + (i + 1) + ":");
             altura[i] = sc10.nextDouble();
         }
 
