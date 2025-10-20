@@ -45,8 +45,10 @@ public class Main {
             } while (!(opcion.equals("1") || opcion.equals("2") || opcion.equals("3") || opcion.equals("4") || opcion.equals("5")));
 
             if (!opcion.equals("0")) {
+
                 //opcion escogida por ti
                 switch (opcion) {
+
                     case "1": //piedra
                         System.out.print("Elegiste piedra\n");
                         System.out.println("-------------------------");
@@ -118,12 +120,15 @@ public class Main {
 
 
                 if (!(opcion.equals("5") || opcion.equals("0"))) { //no entrar salida ni opcion = 0
-                    //numero aleatorio maquina
+
+
                     if (n1.equals("1") || n2.equals("1") || n3.equals("1")) { // opciones 1 para confirmar
-                        int numeroAleatorio = (int) (1 + Math.random() * 3);
+
+                        int numeroAleatorio = (int) (1 + Math.random() * 3);//numero aleatorio maquina
 
                         if (!opcion.equals("4")) {//+ opcion distinta 4
-                            switch (numeroAleatorio) {
+
+                            switch (numeroAleatorio) {//opcion maquina
                                 case 1:
                                     System.out.println("La máquina eligió piedra");
                                     contadorPiedraAI++;
