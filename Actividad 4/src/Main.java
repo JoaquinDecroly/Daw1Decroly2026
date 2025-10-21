@@ -167,46 +167,36 @@ public class Main {
 //        //ejercicio 10
         Scanner sc10 = new Scanner(System.in);
 
+        System.out.println("Introduzca N: ");
+        int N = sc10.nextInt(); // mejor int
 
-        System.out.println("Introduzca N ");
-        double N = sc10.nextDouble();
-
-
-
+        double[] altura = new double[N];
         double suma = 0;
 
-        double[] altura = new double[(int)N];
-
-        for(int i = 0; i < altura.length;i++){
-            System.out.println("Inserte la altura " + (i + 1) + ":");
+        for (int i = 0; i < altura.length; i++) {
+            System.out.println("Inserte la altura " + (i + 1) + ": ");
             altura[i] = sc10.nextDouble();
+            suma += altura[i];
         }
 
-
-        double media = 0;
-        double max = 0;
-        double min = 0;
+        double media = suma / altura.length;
+        double max = Double.MIN_VALUE;
+        double min = Double.MAX_VALUE;
 
         for (int i = 0; i < altura.length; i++) {
-            altura[i] += suma;
-            media = suma / altura.length;
+            max = Math.max(altura[i], max);
+            min = Math.min(altura[i], min);
 
-         max = Double.MIN_VALUE;
-         min = Double.MAX_VALUE;
-
-        Math.max(altura[i], max);
-        Math.min(altura[i], min);
-
-            if(altura[i] >= media){
-                System.out.println("Mayor o igual a la media " + altura[i]);
-            }else{
-                System.out.println("Menor o igual a la media " + altura[i]);
+            if (altura[i] >= media) {
+                System.out.println("Mayor o igual a la media: " + altura[i]);
+            } else {
+                System.out.println("Menor que la media: " + altura[i]);
             }
         }
 
-        System.out.println("Media " + media);
-        System.out.println("Maximo " + max);
-        System.out.println("Minimo " + min);
+        System.out.println("\nMedia: " + media);
+        System.out.println("Máximo: " + max);
+        System.out.println("Mínimo: " + min);
 
 //        //ejercicio 11 
 //        Scanner sc11 = new Scanner(System.in);
