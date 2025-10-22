@@ -35,19 +35,19 @@ public class Main {
 //        do {
             do {
                 System.out.println("\n------Elige tu arma------");
-                System.out.println("1 . Piedra");
-                System.out.println("2. Papel");
-                System.out.println("3. Tijera");
-                System.out.println("4. Estadisticas");
-                System.out.println("5. Salir");
+                System.out.println("P . Piedra");
+                System.out.println("PA. Papel");
+                System.out.println("T. Tijera");
+                System.out.println("E. Estadisticas");
+                System.out.println("S. Salir");
                 opcion = sc.nextLine();
                 
                 if (!opcion.equals("0")) {//opcion no es 0
 
                     //opcion escogida por ti
-                    switch (opcion) {
+                    switch (opcion.toUpperCase()) {
 
-                        case "1": //piedra
+                        case "P": //piedra
                             System.out.print("Elegiste piedra\n");
                             System.out.println("-------------------------");
                             System.out.println("elige 1 para confirmar, 0 para volver");
@@ -55,6 +55,7 @@ public class Main {
 
                             if (n1.equals("1")) {//elegir piedra y ++
                                 System.out.print("Elegiste piedra\n");
+                                opcion = "1";
                                 contadorPiedraJ++;
                                 break;
 
@@ -65,12 +66,14 @@ public class Main {
                             }else if(n1.isBlank()) { //confirmar como intro
                                 System.out.print("Se tomara de manera automatica "+"confirmar"+"\n");
                                 System.out.print("\nElegiste piedra\n");
+                                opcion = "1";
                                 n1 = "1";
                                 break;
                             }
+                            
                             break;
 
-                        case "2": //papel
+                        case "PA": //papel
                             System.out.print("Elegiste papel\n");
                             System.out.println("-------------------------");
                             System.out.println("elige 1 para confirmar, 0 para volver");
@@ -78,6 +81,7 @@ public class Main {
 
                             if (n2.equals("1")) {//elegir papel y ++
                                 System.out.print("\nElegiste papel\n");
+                                opcion = "2";
                                 contadorPapelJ++;
                                 break;
 
@@ -88,12 +92,14 @@ public class Main {
                             }else if(n2.isBlank()){//confirmar como intro
                                 System.out.print("Se tomara de manera automatica "+"confirmar"+"\n");
                                 System.out.print("\nElegiste papel\n");
+                                opcion = "2";
                                 n2 = "1";
                                 break;
                             }
+                            
                             break;
 
-                        case "3": //tijera
+                        case "T": //tijera
                             System.out.print("Elegiste tijera\n");
                             System.out.println("-------------------------");
                             System.out.println("elige 1 para confirmar, 0 para volver");
@@ -101,6 +107,7 @@ public class Main {
 
                             if (n3.equals("1")) {//elegir tijera y ++
                                 System.out.print("\nElegiste tijera\n");
+                                opcion = "3";
                                 contadorTijerasJ++;
                                 break;
 
@@ -111,12 +118,14 @@ public class Main {
                             }else if(n3.isBlank()) {//confirmar como intro
                                 System.out.print("Se tomara de manera automatica "+"confirmar"+"\n");
                                 System.out.print("\nElegiste tijera\n");
+                                opcion = "3";
                                 n3 = "1";
                                 break;
                             }
+                            
                             break;
 
-                        case "4"://mostrar contadores
+                        case "E"://mostrar contadores
                             System.out.println("---------ESTADISTICAS-----------");
                             System.out.println("-PapelJugador " + contadorPapelJ + "\n-PiedraJugador " + contadorPiedraJ
                                     + "\n-TijeraJugador " + contadorTijerasJ
@@ -129,13 +138,16 @@ public class Main {
 
                             break;
 
-                        case "5"://salir
+                        case "S"://salir
                             System.out.println("Saliendo...");
                             break;
+                        
+                        default:
+                            System.out.println("Escoja una opcion correcta!");
                     }
 
 
-                    if (!(opcion.equals("5") || opcion.equals("0") || opcion.isEmpty())) { //no entrar salida ni opcion = 0
+                    if (!(opcion.equals("S") || opcion.equals("0") || opcion.isEmpty())) { //no entrar salida ni opcion = 0
 
                         if(opcion.equals("1") || opcion.equals("2") || opcion.equals("3")){ //ver si la opcion es 1, 2 o 3
                             
@@ -143,7 +155,7 @@ public class Main {
 
                                 int numeroAleatorio = (int) (1 + Math.random() * 3);//numero aleatorio maquina
 
-                                    if (!opcion.equals("4")) {//+ opcion distinta 4
+                                    if (!opcion.equals("E")) {//+ opcion distinta 4
     
                                         switch (numeroAleatorio) {//opcion maquina
                                             case 1:
@@ -167,8 +179,8 @@ public class Main {
                                             System.out.println("Empate!");
                                             contadorE++;
     
-                                        } else if (opcion.equals("1") && numeroAleatorio == 3 || opcion.equals("2") && numeroAleatorio == 1
-                                                || opcion.equals("3") && numeroAleatorio == 2) {//opciones ganadoras del jugador
+                                        } else if (opcion.equals("P") && numeroAleatorio == 3 || opcion.equals("PA") && numeroAleatorio == 1
+                                                || opcion.equals("T") && numeroAleatorio == 2) {//opciones ganadoras del jugador
                                             System.out.println("--------------------------\n");
                                             System.out.println("Ganaste!");
                                             contadorV++;
@@ -184,7 +196,7 @@ public class Main {
                         
                     }
                 }
-            } while (!opcion.equals("5"));
+            } while (!opcion.equals("S"));
 
           
 //        }while (!(n1.equals("2") || n2.equals("2") || n3.equals("3") || opcion.equals("5"))) ;
