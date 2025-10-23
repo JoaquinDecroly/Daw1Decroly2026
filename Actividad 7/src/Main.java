@@ -26,13 +26,12 @@ public class Main {
 
 
         String opcion = "0";
+        boolean confirmado = false;
 
         String n1 = "";
         String n2 = "";
         String n3 = "";
-
-
-//        do {
+        
             do {
                 System.out.println("\n------Elige tu arma------");
                 System.out.println("P . Piedra");
@@ -56,6 +55,7 @@ public class Main {
                             if (n1.equals("1")) {//elegir piedra y ++
                                 System.out.print("Elegiste piedra\n");
                                 opcion = "1";
+                                confirmado = true;
                                 contadorPiedraJ++;
                                 break;
 
@@ -64,9 +64,10 @@ public class Main {
                                 break;
                                 
                             }else if(n1.isBlank()) { //confirmar como intro
-                                System.out.print("Se tomara de manera automatica "+"confirmar"+"\n");
+                                System.out.print("(Se tomara de manera automatica confirmar)\n");
                                 System.out.print("\nElegiste piedra\n");
                                 opcion = "1";
+                                confirmado = true;
                                 contadorPiedraJ++;
                                 break;
                             }
@@ -82,6 +83,7 @@ public class Main {
                             if (n2.equals("1")) {//elegir papel y ++
                                 System.out.print("\nElegiste papel\n");
                                 opcion = "2";
+                                confirmado = true;
                                 contadorPapelJ++;
                                 break;
 
@@ -90,9 +92,10 @@ public class Main {
                                 break;
                                 
                             }else if(n2.isBlank()){//confirmar como intro
-                                System.out.print("Se tomara de manera automatica "+"confirmar"+"\n");
+                                System.out.print("(Se tomara de manera automatica confirmar)\n");
                                 System.out.print("\nElegiste papel\n");
                                 opcion = "2";
+                                confirmado = true;
                                 contadorPiedraJ++;
                                 break;
                             }
@@ -108,6 +111,7 @@ public class Main {
                             if (n3.equals("1")) {//elegir tijera y ++
                                 System.out.print("\nElegiste tijera\n");
                                 opcion = "3";
+                                confirmado = true;
                                 contadorTijerasJ++;
                                 break;
 
@@ -116,9 +120,10 @@ public class Main {
                                 break;
                                 
                             }else if(n3.isBlank()) {//confirmar como intro
-                                System.out.print("Se tomara de manera automatica "+"confirmar"+"\n");
+                                System.out.print("(Se tomara de manera automatica confirmar)\n");
                                 System.out.print("\nElegiste tijera\n");
                                 opcion = "3";
+                                confirmado = true;
                                 contadorPiedraJ++;
                                 break;
                             }
@@ -126,6 +131,7 @@ public class Main {
                             break;
 
                         case "E"://mostrar contadores
+                            
                             System.out.println("---------ESTADISTICAS-----------");
                             System.out.println("-PapelJugador " + contadorPapelJ + "\n-PiedraJugador " + contadorPiedraJ
                                     + "\n-TijeraJugador " + contadorTijerasJ
@@ -142,64 +148,60 @@ public class Main {
                             System.out.println("Saliendo...");
                             break;
                         
-                        default:
+                        default: //mensaje fuera opciones
                             System.out.println("Escoja una opcion correcta!");
                     }
 
 
                     if (!(opcion.equals("S") || opcion.equals("0") || opcion.isEmpty())) { //no entrar salida ni opcion = 0
+                        
+                        if(confirmado) { //boleano para confirmación opción
 
-                        if(opcion.equals("1") || opcion.equals("2") || opcion.equals("3")){ //ver si la opcion es 1, 2 o 3
-                            
-//                            if (n1.equals("1") || n2.equals("1") || n3.equals("1")) { // opciones 1 para confirmar
+                            if (opcion.equals("1") || opcion.equals("2") || opcion.equals("3")) { //ver si la opcion es 1, 2 o 3
 
                                 int numeroAleatorio = (int) (1 + Math.random() * 3);//numero aleatorio maquina
 
-                                    if (!opcion.equals("E")) {//+ opcion distinta 4
-    
-                                        switch (numeroAleatorio) {//opcion maquina
-                                            case 1:
-                                                System.out.println("\nLa máquina eligió piedra");
-                                                contadorPiedraAI++;
-                                                break;
-    
-                                            case 2:
-                                                System.out.println("\nLa máquina eligió papel");
-                                                contadorPapelAI++;
-                                                break;
-    
-                                            case 3:
-                                                System.out.println("\nLa máquina eligió tijera");
-                                                contadorTijerasAI++;
-                                                break;
-                                        }
-    
-                                        if (Integer.parseInt(opcion) == numeroAleatorio) {//a == b, empate
-                                            System.out.println("--------------------------\n");
-                                            System.out.println("Empate!");
-                                            contadorE++;
-    
-                                        } else if (opcion.equals("P") && numeroAleatorio == 3 || opcion.equals("PA") && numeroAleatorio == 1
-                                                || opcion.equals("T") && numeroAleatorio == 2) {//opciones ganadoras del jugador
-                                            System.out.println("--------------------------\n");
-                                            System.out.println("Ganaste!");
-                                            contadorV++;
-                                        } else {
-                                            System.out.println("--------------------------\n");//si no opciones ganadoras
-                                            System.out.println("Perdiste!");
-                                            contadorD++;
-                                        }
+                                if (!opcion.equals("E")) {//+ opcion distinta 4
+
+                                    switch (numeroAleatorio) {//opcion maquina
+                                        
+                                        case 1: //piedraAI
+                                            System.out.println("\nLa máquina eligió piedra");
+                                            contadorPiedraAI++;
+                                            break;
+
+                                        case 2: //papelAI
+                                            System.out.println("\nLa máquina eligió papel");
+                                            contadorPapelAI++;
+                                            break;
+
+                                        case 3: //tijeraAI
+                                            System.out.println("\nLa máquina eligió tijera");
+                                            contadorTijerasAI++;
+                                            break;
                                     }
-//                            }
+
+                                    if (Integer.parseInt(opcion) == numeroAleatorio) {//a == b, empate
+                                        System.out.println("--------------------------\n");
+                                        System.out.println("Empate!");
+                                        contadorE++;
+
+                                    } else if (opcion.equals("P") && numeroAleatorio == 3 || opcion.equals("PA") && numeroAleatorio == 1
+                                            || opcion.equals("T") && numeroAleatorio == 2) {//opciones ganadoras del jugador
+                                        System.out.println("--------------------------\n");
+                                        System.out.println("Ganaste!");
+                                        contadorV++;
+                                    } else {
+                                        System.out.println("--------------------------\n");//si no opciones ganadoras
+                                        System.out.println("Perdiste!");
+                                        contadorD++;
+                                    }
+                                }
+                            }
                         }
-                        
                         
                     }
                 }
-            } while (!opcion.equals("S"));
-
-          
-//        }while (!(n1.equals("2") || n2.equals("2") || n3.equals("3") || opcion.equals("5"))) ;
-           
+            } while (!opcion.equals("S"));           
         }
     }
