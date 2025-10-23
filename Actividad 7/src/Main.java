@@ -67,7 +67,7 @@ public class Main {
                                 System.out.print("Se tomara de manera automatica "+"confirmar"+"\n");
                                 System.out.print("\nElegiste piedra\n");
                                 opcion = "1";
-                                n1 = "1";
+                                contadorPiedraJ++;
                                 break;
                             }
                             
@@ -93,7 +93,7 @@ public class Main {
                                 System.out.print("Se tomara de manera automatica "+"confirmar"+"\n");
                                 System.out.print("\nElegiste papel\n");
                                 opcion = "2";
-                                n2 = "1";
+                                contadorPiedraJ++;
                                 break;
                             }
                             
@@ -119,7 +119,7 @@ public class Main {
                                 System.out.print("Se tomara de manera automatica "+"confirmar"+"\n");
                                 System.out.print("\nElegiste tijera\n");
                                 opcion = "3";
-                                n3 = "1";
+                                contadorPiedraJ++;
                                 break;
                             }
                             
@@ -151,7 +151,7 @@ public class Main {
 
                         if(opcion.equals("1") || opcion.equals("2") || opcion.equals("3")){ //ver si la opcion es 1, 2 o 3
                             
-                            if (n1.equals("1") || n2.equals("1") || n3.equals("1")) { // opciones 1 para confirmar
+//                            if (n1.equals("1") || n2.equals("1") || n3.equals("1")) { // opciones 1 para confirmar
 
                                 int numeroAleatorio = (int) (1 + Math.random() * 3);//numero aleatorio maquina
 
@@ -190,7 +190,7 @@ public class Main {
                                             contadorD++;
                                         }
                                     }
-                            } 
+//                            }
                         }
                         
                         
