@@ -82,31 +82,31 @@ public class Main {
 //        System.out.println("Hay " + ceros + " numeros iguales a 0");
 
         //ejercicio 4
-        Scanner sc1 = new Scanner(System.in);
-        int[][] array = new int[4][5];
-
-        for(int i = 0; i < array.length; i++){
-            System.out.println("Ponga notas alumno " + (i + 1));
-           for(int j = 0; j < array[i].length; j++){
-                System.out.println("Posicion [" + i + "][" + j + "]"); //posicion matriz
-
-                System.out.print("Nota " + (j + 1) + ": "); //dar nota cambio columna
-                array[i][j] = sc1.nextInt();
-            }
-        }
-        for(int i = 0; i < array.length; i++){
-
-    double max = Double.MIN_VALUE, min = Double.MAX_VALUE;
-
-        Math.max(array[i], max);
-
-
-            System.out.println("Alumno " + (i + 1));
-            System.out.println("La nota maxima es: " + max);
-            System.out.println("La nota minima es: " + min);
-            System.out.println("La nota media es: " + media);
-            System.out.println("---------------------------------");
-        }
+//        Scanner sc1 = new Scanner(System.in);
+//        int[][] array = new int[4][5];
+//
+//        for(int i = 0; i < array.length; i++){
+//            System.out.println("Ponga notas alumno " + (i + 1));
+//           for(int j = 0; j < array[i].length; j++){
+//                System.out.println("Posicion [" + i + "][" + j + "]"); //posicion matriz
+//
+//                System.out.print("Nota " + (j + 1) + ": "); //dar nota cambio columna
+//                array[i][j] = sc1.nextInt();
+//            }
+//        }
+//        for(int i = 0; i < array.length; i++){
+//
+//    double max = Double.MIN_VALUE, min = Double.MAX_VALUE;
+//
+//        Math.max(array[i], max);
+//
+//
+//            System.out.println("Alumno " + (i + 1));
+//            System.out.println("La nota maxima es: " + max);
+//            System.out.println("La nota minima es: " + min);
+//            System.out.println("La nota media es: " + media);
+//            System.out.println("---------------------------------");
+//        }
 
         //ejercicio 5
         Scanner sc = new Scanner(System.in);
@@ -115,6 +115,16 @@ public class Main {
         int N = sc.nextInt();
 
         double[][] array2 = new double[N][2]; //lineas N, columnas fijas
+
+        double sueldo = 0.0;
+        double sumaMasc = 0.0;
+        double sumaFem = 0.0;
+
+        int masc = 0;
+        double mediaMasc = 0.0;
+
+        int fem = 0;
+        double mediaFem = 0.0;
 
         for (int i = 0; i < array2.length; i++) {
             System.out.println("Persona " + (i + 1));
@@ -129,9 +139,23 @@ public class Main {
 
         System.out.println("\n--- Datos Registrados ---");
             for (int i = 0; i < array2.length; i++) {
-                System.out.println("Persona " + (i + 1)); //persona
+                System.out.println("Persona " + (i + 1) + "--------"); //persona
                 System.out.print("Genero " + array2[i][0] + " " + "Sueldo " + array2[i][1] + "\n");
-            }
 
+                sueldo = array2[i][1];
+
+                if(array2[i][0] == 0.0){
+                    masc++;
+
+
+                }else if(array2[i][0] == 1.0){
+                    fem++;
+
+                }
+
+                System.out.println("Media sueldo: " + "\nVarones " + sumaMasc/masc + "\nMujeres " + sumaFem/fem);
+            }
+        sumaFem+=array2[i][1];
+        sumaMasc+=array2[i][1];
     }
 }
