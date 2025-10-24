@@ -153,7 +153,7 @@ public class Main {
                             break;
                         
                         default: //mensaje fuera opciones
-                            System.out.println("Escoja una opcion correcta!");
+                            System.out.println("\nEscoja una opcion correcta!");
                     }
 
 
@@ -170,17 +170,17 @@ public class Main {
                                     switch (numeroAleatorio) {//opcion maquina
                                         
                                         case 1: //piedraAI
-                                            System.out.println("\nVS\nLa máquina eligió piedra");
+                                            System.out.println("\nVS\n\nLa máquina eligió piedra");
                                             contadorPiedraAI++;
                                         break;
 
                                         case 2: //papelAI
-                                            System.out.println("\nVS\nLa máquina eligió papel");
+                                            System.out.println("\nVS\n\nLa máquina eligió papel");
                                             contadorPapelAI++;
                                         break;
 
                                         case 3: //tijeraAI
-                                            System.out.println("\nVS\nLa máquina eligió tijera");
+                                            System.out.println("\nVS\n\nLa máquina eligió tijera");
                                             contadorTijerasAI++;
                                         break;
                                     }
