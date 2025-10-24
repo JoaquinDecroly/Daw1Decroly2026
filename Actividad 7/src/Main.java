@@ -132,6 +132,9 @@ public class Main {
                         case "5"://salir
                             System.out.println("Saliendo...");
                             break;
+
+                        default:
+                            System.out.println("Elige una opcion del menu!");
                     }
 
 
