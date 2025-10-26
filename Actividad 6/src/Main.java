@@ -117,14 +117,15 @@ public class Main {
         double[][] array2 = new double[N][2]; //lineas N, columnas fijas
 
         double sueldo = 0.0;
+        int genero = 0;
+
         double sumaMasc = 0.0;
         double sumaFem = 0.0;
 
         int masc = 0;
-        double mediaMasc = 0.0;
 
         int fem = 0;
-        double mediaFem = 0.0;
+        
 
         for (int i = 0; i < array2.length; i++) {
             System.out.println("Persona " + (i + 1));
@@ -141,23 +142,21 @@ public class Main {
             for (int i = 0; i < array2.length; i++) {
                 System.out.println("Persona " + (i + 1) + "--------"); //persona
                 System.out.print("Genero " + array2[i][0] + " " + "Sueldo " + array2[i][1] + "\n");
+                
 
                 sueldo = array2[i][1];
+                genero = (int) array2[i][0];
 
-                if(array2[i][0] == 0.0){
+                if(genero == 0){
                     masc++;
-
-
-                }else if(array2[i][0] == 1.0){
+                    sumaMasc+=sueldo;
+                    
+                }else{
                     fem++;
-
+                    sumaFem+=sueldo;
                 }
                 
-                sumaFem+=array2[i][1];
-                sumaMasc+=array2[i][1];
-                
-                System.out.println("Media sueldo: " + "\nVarones " + sumaMasc/masc + "\nMujeres " + sumaFem/fem);
             }
-        
+        System.out.println("Media sueldo: " + "\nVarones " + sumaMasc/masc + "\nMujeres " + sumaFem/fem);
     }
 }
