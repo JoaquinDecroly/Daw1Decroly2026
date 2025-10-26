@@ -152,10 +152,12 @@ public class Main {
                     fem++;
 
                 }
-
+                
+                sumaFem+=array2[i][1];
+                sumaMasc+=array2[i][1];
+                
                 System.out.println("Media sueldo: " + "\nVarones " + sumaMasc/masc + "\nMujeres " + sumaFem/fem);
             }
-        sumaFem+=array2[i][1];
-        sumaMasc+=array2[i][1];
+        
     }
 }
