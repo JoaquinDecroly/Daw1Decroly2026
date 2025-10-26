@@ -98,7 +98,7 @@ public class Main {
                                 System.out.print("\nTu elegiste papel\n");
                                 opcion = "2";
                                 confirmado = true;
-                                contadorPiedraJ++;
+                                contadorPapelJ++;
                                 break;
                             }
                             
@@ -127,7 +127,7 @@ public class Main {
                                 System.out.print("\nTu elegiste tijera\n");
                                 opcion = "3";
                                 confirmado = true;
-                                contadorPiedraJ++;
+                                contadorTijerasJ++;
                                 break;
                             }
                             
