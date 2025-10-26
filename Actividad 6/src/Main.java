@@ -82,81 +82,91 @@ public class Main {
 //        System.out.println("Hay " + ceros + " numeros iguales a 0");
 
         //ejercicio 4
-//        Scanner sc1 = new Scanner(System.in);
-//        int[][] array = new int[4][5];
-//
-//        for(int i = 0; i < array.length; i++){
-//            System.out.println("Ponga notas alumno " + (i + 1));
-//           for(int j = 0; j < array[i].length; j++){
-//                System.out.println("Posicion [" + i + "][" + j + "]"); //posicion matriz
-//
-//                System.out.print("Nota " + (j + 1) + ": "); //dar nota cambio columna
-//                array[i][j] = sc1.nextInt();
-//            }
-//        }
-//        for(int i = 0; i < array.length; i++){
-//
-//    double max = Double.MIN_VALUE, min = Double.MAX_VALUE;
-//
-//        Math.max(array[i], max);
-//
-//
-//            System.out.println("Alumno " + (i + 1));
-//            System.out.println("La nota maxima es: " + max);
-//            System.out.println("La nota minima es: " + min);
-//            System.out.println("La nota media es: " + media);
-//            System.out.println("---------------------------------");
-//        }
+        Scanner sc1 = new Scanner(System.in);
+        int[][] array = new int[4][5];
 
-        //ejercicio 5
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println(" N Personas: ");
-        int N = sc.nextInt();
-
-        double[][] array2 = new double[N][2]; //lineas N, columnas fijas
-
-        double sueldo = 0.0;
-        int genero = 0;
-
-        double sumaMasc = 0.0;
-        double sumaFem = 0.0;
-
-        int masc = 0;
-
-        int fem = 0;
-        
-
-        for (int i = 0; i < array2.length; i++) {
-            System.out.println("Persona " + (i + 1));
-
-            System.out.println("Género (0 para varón, 1 para mujer): ");//pedir genero y almacenarlo columna 0 cualquier linea
-            array2[i][0] = sc.nextInt();
+        for(int i = 0; i < array.length; i++){
+            System.out.println("Ponga notas alumno " + (i + 1));
             
-            System.out.println("Sueldo: "); //pedir sueldo y almacenarlo columna 1 cualquier linea
-            array2[i][1] = sc.nextDouble();
+           for(int j = 0; j < array[i].length; j++){
+               
+                System.out.println("Posicion [" + i + "][" + j + "]"); //posicion matriz
+
+                System.out.print("Nota " + (j + 1) + ": "); //dar nota cambio columna
+                array[i][j] = sc1.nextInt();
+            }
+        }
+        for(int i = 0; i < array.length; i++){
+            
+            int suma = 0;
+            int max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
+                
+                for(int j = 0;j < array[i].length;j++){
+                  int nota = array[i][j];
+                  
+                  max = Math.max(nota, max);
+                  min = Math.min(nota, min);
+                  
+                  suma += nota;
+                }
+
+            System.out.println("\nAlumno " + (i + 1));
+            System.out.println("La nota maxima es: " + max);
+            System.out.println("La nota minima es: " + min);
+            System.out.println("La nota media es: " + ((double)suma/array[i].length));
+            System.out.println("---------------------------------");
             
         }
 
-        System.out.println("\n--- Datos Registrados ---");
-            for (int i = 0; i < array2.length; i++) {
-                System.out.println("Persona " + (i + 1) + "--------"); //persona
-                System.out.print("Genero " + array2[i][0] + " " + "Sueldo " + array2[i][1] + "\n");
-                
-
-                sueldo = array2[i][1];
-                genero = (int) array2[i][0];
-
-                if(genero == 0){
-                    masc++;
-                    sumaMasc+=sueldo;
-                    
-                }else{
-                    fem++;
-                    sumaFem+=sueldo;
-                }
-                
-            }
-        System.out.println("Media sueldo: " + "\nVarones " + sumaMasc/masc + "\nMujeres " + sumaFem/fem);
+        //ejercicio 5
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println(" N Personas: ");
+//        int N = sc.nextInt();
+//
+//        double[][] array2 = new double[N][2]; //lineas N, columnas fijas
+//
+//        double sueldo = 0.0;
+//        int genero = 0;
+//
+//        double sumaMasc = 0.0;
+//        double sumaFem = 0.0;
+//
+//        int masc = 0;
+//
+//        int fem = 0;
+//        
+//
+//        for (int i = 0; i < array2.length; i++) {
+//            System.out.println("Persona " + (i + 1));
+//
+//            System.out.println("Género (0 para varón, 1 para mujer): ");//pedir genero y almacenarlo columna 0 cualquier linea
+//            array2[i][0] = sc.nextInt();
+//            
+//            System.out.println("Sueldo: "); //pedir sueldo y almacenarlo columna 1 cualquier linea
+//            array2[i][1] = sc.nextDouble();
+//            
+//        }
+//
+//        System.out.println("\n--- Datos Registrados ---");
+//            for (int i = 0; i < array2.length; i++) {
+//                System.out.println("Persona " + (i + 1) + "--------"); //persona
+//                System.out.print("Genero " + array2[i][0] + " " + "Sueldo " + array2[i][1] + "\n");
+//                
+//
+//                sueldo = array2[i][1];
+//                genero = (int) array2[i][0];
+//
+//                if(genero == 0){
+//                    masc++;
+//                    sumaMasc+=sueldo;
+//                    
+//                }else{
+//                    fem++;
+//                    sumaFem+=sueldo;
+//                }
+//                
+//            }
+//        System.out.println("Media sueldo: " + "\nVarones " + sumaMasc/masc + "\nMujeres " + sumaFem/fem);
     }
 }
